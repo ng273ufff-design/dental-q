@@ -3,10 +3,10 @@
  */
 (function () {
   'use strict';
-  // ★★★ 歯科ブログ用のIDをここに貼る（今は空＝無効・安全） ★★★
-  const GA4_ID = '';        // 例: G-XXXXXXXXXX（GA4で新プロパティ作成後に貼る）
-  const CLARITY_ID = '';    // 例: xxxxxxxxxx（Clarityで新プロジェクト作成後に貼る）
-  const GAS_TRACKER = '';   // 独自ダッシュボード用GASのURL（後日）
+  // ★★★ 計測ID（当面はマネとくのを流用。専用プロパティ作成後はここを差し替え） ★★★
+  const GA4_ID = 'G-0NQHWCG4YM';    // ※マネとくと共用。GA4はホスト名で分離可
+  const CLARITY_ID = 'wpude6ryte';  // ※マネとくと共用
+  const GAS_TRACKER = '';           // 独自ダッシュボードは後日（Dental Q専用GAS作成時に設定）
 
   if (GAS_TRACKER) {
     try {
