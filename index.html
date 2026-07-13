@@ -3,38 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dental Q｜歯の"ホント"を論文ベースでやさしく</title>
-<meta name="description" content="電動歯ブラシ・フロス・フッ素から子どもの歯の育ちまで。信頼できる論文をもとに、歯科の"ホント"を正直にやさしく解説するメディアです。">
-<meta property="og:title" content="Dental Q｜歯の"ホント"を論文ベースでやさしく">
+<title>Dental Q｜歯の"ホント"を現役歯科医師が論文で</title>
+<meta name="description" content="電動歯ブラシ・ホワイトニング・子どもの歯から歯科医師向けの論文データベースまで。現役歯科医師が、信頼できる論文（PMID/DOI明記）をもとに正直に解説します。">
+<meta property="og:title" content="Dental Q｜歯の"ホント"を現役歯科医師が論文で">
 <meta property="og:description" content="信頼できる論文をもとに、歯科のホントを正直に解説するメディア。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dental Q">
 <link rel="canonical" href="https://ng273ufff-design.github.io/dental-q/">
 <link rel="stylesheet" href="assets/style.css">
-<script defer src="assets/analytics.js"></script>
+<style>
+  .layer{max-width:1080px;margin:0 auto;padding:34px 22px 4px;}
+  .layer-tag{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:800;letter-spacing:.06em;padding:7px 16px;border-radius:999px;}
+  .layer-tag svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;}
+  .layer-general{background:var(--brand-tint);color:var(--brand-strong);}
+  .layer-pro{background:#10151b;color:#e7ebee;}
+  .layer h3{font-size:clamp(20px,3vw,26px);color:var(--ink);margin:14px 0 2px;font-weight:800;}
+  .layer p{color:var(--muted);font-size:14.5px;}
+  .prodb{display:flex;gap:18px;align-items:center;background:linear-gradient(135deg,#151a20,#10151b);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:24px;margin:8px 0 6px;text-decoration:none;box-shadow:var(--shadow-sm);transition:transform .15s ease;}
+  .prodb:hover{transform:translateY(-3px);text-decoration:none;}
+  .prodb .pd-ic{width:52px;height:52px;flex-shrink:0;border-radius:13px;background:#2a52c9;display:flex;align-items:center;justify-content:center;}
+  .prodb .pd-ic svg{width:28px;height:28px;stroke:#fff;stroke-width:1.8;fill:none;}
+  .prodb .pd-t{font-size:17px;font-weight:800;color:#f3f5f6;}
+  .prodb .pd-d{font-size:13px;color:#9fb0bd;margin-top:3px;}
+  .profile-wrap{max-width:820px;margin:0 auto;}
+</style>
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 4c-1.8 0-2.7 1-4.5 1C6 5 5 4.8 4.4 6.4c-.7 2 0 4.6 .6 6.8.4 1.6.7 4 1.6 5.4.7 1 1.7.7 2-.6.3-1.4.4-3.2 1.4-3.2s1.1 1.8 1.4 3.2c.3 1.3 1.3 1.6 2 .6.9-1.4 1.2-3.8 1.6-5.4.6-2.2 1.3-4.8.6-6.8C19 4.8 18 5 16.5 5 14.7 5 13.8 4 12 4Z"/></symbol>
   <symbol id="i-book" viewBox="0 0 24 24"><path d="M6 3h8l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M8 12.5h7M8 16h7"/></symbol>
+  <symbol id="i-books" viewBox="0 0 24 24"><path d="M4 5h6v14H4zM10 7l5-1 4 12-5 1M6 8h2M6 11h2"/></symbol>
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 4l1.6 4.4L18 10l-4.4 1.6L12 16l-1.6-4.4L6 10l4.4-1.6L12 4Z"/></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-9.2-9C1.3 8 3 4.5 6.3 4.5c2 0 3.2 1.2 3.7 2 .5-.8 1.7-2 3.7-2C17 4.5 18.7 8 21.2 11 19 15.5 12 20 12 20Z"/></symbol>
   <symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><path d="M12 8.5v6M8 11h8M9.5 20l2.5-5.5L14.5 20"/></symbol>
   <symbol id="i-brush" viewBox="0 0 24 24"><path d="M4 19.5l7.5-7.5M13 4.5l6.5 6.5M11.5 12l-6 6a1.8 1.8 0 0 1-2.5-2.5l6-6M13 4.5l3.5-1 3 3-1 3.5-2.5 2.5-6-6L13 4.5Z"/></symbol>
   <symbol id="i-tag" viewBox="0 0 24 24"><path d="M4 4h7l9 9-7 7-9-9V4Z"/><circle cx="8" cy="8" r="1.4" fill="currentColor" stroke="none"/></symbol>
-  <symbol id="i-books" viewBox="0 0 24 24"><path d="M4 5h6v14H4zM10 7l5-1 4 12-5 1M6 8h2M6 11h2"/></symbol>
-  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v15M8 19h8M6 8l-3 5.5h6L6 8ZM18 8l-3 5.5h6L18 8ZM5.5 8l6.5-2 6.5 2"/></symbol>
+  <symbol id="i-implant" viewBox="0 0 24 24"><path d="M12 3v6M9 6h6M10 9h4l-.6 6a1.4 1.4 0 0 1-2.8 0L10 9ZM12 15v5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
 </svg>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand"><span class="wm-dental">DENTAL</span><span class="wm-sep"></span><b>Q</b></a>
     <nav class="nav">
-      <a href="#oralcare">オーラルケア</a>
-      <a href="#kids">子どもの歯</a>
+      <a href="#general">一般向け</a>
+      <a href="#pro">歯科医師向け</a>
       <a href="#about">このサイトについて</a>
     </nav>
   </div>
@@ -45,7 +63,7 @@
     <div class="hero-copy">
       <span class="eyebrow"><svg class="ico"><use href="#i-shield"/></svg>現役歯科医師 × 論文ベース</span>
       <h1>歯の<em>"ホント"</em>を、<br>現役歯科医師が論文で。</h1>
-      <p>「電動歯ブラシって本当にいいの？」——ネットの噂ではなく、<strong>現役歯科医師が信頼できる研究（論文）をもとに</strong>正直に答えます。メーカーが言わない"利益相反"まで書くのが私たちの約束です。</p>
+      <p>「電動歯ブラシって本当にいいの？」——ネットの噂ではなく、<strong>現役歯科医師が信頼できる研究（論文）をもとに</strong>正直に答えます。一般の方向けの解説から、歯科医師向けの<strong>論文データベース</strong>まで。</p>
     </div>
     <div class="hero-art" aria-hidden="true">
       <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,9 +86,16 @@
   </div>
 </div>
 
+<!-- ============ 一般層向け ============ -->
+<div class="layer" id="general">
+  <span class="layer-tag layer-general"><svg><use href="#i-heart"/></svg>一般の方向け</span>
+  <h3>毎日のケアと選び方を、論文で。</h3>
+  <p>「どっちがいいの？」に、宣伝ぬきでお答えします。</p>
+</div>
+
 <section class="section" id="oralcare">
-  <h2><svg class="ico"><use href="#i-sparkle"/></svg>オーラルケア（大人）</h2>
-  <p class="sub">毎日のセルフケアと、買うべき道具を論文から。</p>
+  <h2><svg class="ico"><use href="#i-sparkle"/></svg>オーラルケア（毎日のケア）</h2>
+  <p class="sub">歯ブラシ・フロス・フッ素・洗口液・知覚過敏・口臭など。</p>
   <div class="card-grid">
     <a class="card" href="articles/electric-toothbrush.html">
       <div class="thumb" style="background-color:#17202b;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
@@ -87,11 +112,133 @@
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯磨き粉のフッ素、何ppm選べばいいの？</div></div>
     </a>
+    <!--CAT:daily-->
+    <a class="card" href="articles/xylitol.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">キシリトールって 本当に虫歯予防になるの？</div></div>
+    </a>
+    <a class="card" href="articles/tongue-halitosis.html">
+      <div class="thumb" style="background-color:#1f2a37;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">口臭</span><div class="card-title">舌の掃除（舌みがき）って 口臭に効くの？</div></div>
+    </a>
+    <a class="card" href="articles/srp-scaling.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯石取り（SRP）ってどのくらい 効果あるの？</div></div>
+    </a>
+    <a class="card" href="articles/sensitivity-toothpaste.html">
+      <div class="thumb" style="background-color:#1a222e;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">知覚過敏の歯磨き粉（硝酸カリウム） って効くの？</div></div>
+    </a>
+    <a class="card" href="articles/resin-infiltration.html">
+      <div class="thumb" style="background-color:#1f2a37;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">隣の歯との間の初期虫歯、 削らず止められるの？</div></div>
+    </a>
+    <a class="card" href="articles/regular-cleaning.html">
+      <div class="thumb" style="background-color:#1b2430;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">定期的な歯のクリーニングって 意味あるの？</div></div>
+    </a>
+    <a class="card" href="articles/recall-interval.html">
+      <div class="thumb" style="background-color:#1a222e;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯の定期検診って 何ヶ月ごとに行けばいいの？</div></div>
+    </a>
+    <a class="card" href="articles/mouthwash.html">
+      <div class="thumb" style="background-color:#17202b;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">マウスウォッシュは歯みがきの 代わりになるの？</div></div>
+    </a>
+    <a class="card" href="articles/mi-paste-remin.html">
+      <div class="thumb" style="background-color:#1b2430;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">初期虫歯（白い斑点）は 削らず治せるの？</div></div>
+    </a>
+    <a class="card" href="articles/keep-teeth-30y.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">一生自分の歯で噛むには どうするの？</div></div>
+    </a>
+    <a class="card" href="articles/gingivitis-plaque.html">
+      <div class="thumb" style="background-color:#1a222e;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯みがきをサボると歯ぐきは どうなるの？</div></div>
+    </a>
+    <a class="card" href="articles/chx-mouthwash.html">
+      <div class="thumb" style="background-color:#1f2a37;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">クロルヘキシジンのうがい薬って効くの？ 使い続けて大丈夫？</div></div>
+    </a>
+    <a class="card" href="articles/ceramic-crown.html">
+      <div class="thumb" style="background-color:#1a222e;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">セラミックの被せ物って どのくらいもつの？</div></div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="whitening">
+  <h2><svg class="ico"><use href="#i-sparkle"/></svg>ホワイトニング・見た目</h2>
+  <p class="sub">白くしたい人へ。市販ホワイトニング・ホワイトニング歯磨き粉の"どこまで効くか"を正直に。</p>
+  <div class="card-grid">
+    <!--CAT:whitening-->
+    <a class="card" href="articles/whitening-toothpaste.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">ホワイトニング</span><div class="card-title">ホワイトニング歯磨き粉って どこまで白くなるの？</div></div>
+    </a>
+    <a class="card" href="articles/whitening-home.html">
+      <div class="thumb" style="background-color:#1a2733;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">ホワイトニング</span><div class="card-title">市販のホワイトニングって効くの？ 安全なの？</div></div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="perio">
+  <h2><svg class="ico"><use href="#i-shield"/></svg>歯周病・全身の健康</h2>
+  <p class="sub">歯ぐき・歯石・歯周病と、糖尿病や心臓など全身とのつながり。</p>
+  <div class="card-grid">
+    <!--CAT:perio-->
+    <a class="card" href="articles/spt-tooth-loss.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯周病</span><div class="card-title">歯周メンテ(SPT)ってサボると 歯を失うの？</div></div>
+    </a>
+    <a class="card" href="articles/spt-maintenance.html">
+      <div class="thumb" style="background-color:#1a2733;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯周病</span><div class="card-title">歯周病が治った後のメンテナンスって 必要なの？</div></div>
+    </a>
+    <a class="card" href="articles/perio-staging.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯周病</span><div class="card-title">自分の歯周病はどのくらい進んでるの？ ステージとグレードで見る</div></div>
+    </a>
+    <a class="card" href="articles/perio-heart.html">
+      <div class="thumb" style="background-color:#1a2733;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">全身と歯</span><div class="card-title">歯周病って心臓の病気と関係あるの？ 口と全身のつながりを論文で</div></div>
+    </a>
+    <a class="card" href="articles/perio-diabetes.html">
+      <div class="thumb" style="background-color:#17202b;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">全身と歯</span><div class="card-title">歯周病を治すと糖尿病も よくなるの？</div></div>
+    </a>
+    <a class="card" href="articles/full-mouth-vs-quadrant.html">
+      <div class="thumb" style="background-color:#232f3d;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯周病</span><div class="card-title">歯周病治療は一気にやった方がいいの？</div></div>
+    </a>
   </div>
 </section>
 
 <section class="section" id="kids">
-  <h2><svg class="ico"><use href="#i-child"/></svg>子どもの歯・育ち</h2>
+  <h2><svg class="ico"><use href="#i-child"/></svg>子どもの歯・食育</h2>
   <p class="sub">食育・噛む力・歯並び・おしゃぶり——親の「どうするの？」に。</p>
   <div class="card-grid">
     <a class="card" href="articles/pacifier-thumb.html">
@@ -99,15 +246,225 @@
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">指しゃぶり・おしゃぶり、歯並びに影響するの？</div></div>
     </a>
-    <a class="card" href="#">
+    <a class="card" href="articles/chewing.html">
       <div class="thumb" style="background-color:#232f3d;"><img src="assets/img/chewing.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">食育</span><div class="card-title">「30回噛みなさい」って本当に効果あるの？</div></div>
     </a>
-    <a class="card" href="#">
+    <a class="card" href="articles/mouth-breathing.html">
       <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/mouth-breathing.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">お口ぽかん（口呼吸）って顔の発育に影響するの？</div></div>
+    </a>
+    <!--CAT:kids-->
+    <a class="card" href="articles/tongue-tie.html">
+      <div class="thumb" style="background-color:#17202b;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">舌小帯って切った方がいいの？ 授乳がうまくいかない時</div></div>
+    </a>
+    <a class="card" href="articles/teeth-eruption.html">
+      <div class="thumb" style="background-color:#1a222e;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">赤ちゃんの歯っていつ生える？ 生えないと心配？</div></div>
+    </a>
+    <a class="card" href="articles/sugar-caries.html">
+      <div class="thumb" style="background-color:#232f3d;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">食と歯</span><div class="card-title">砂糖をどれくらい減らせば 虫歯にならないの？</div></div>
+    </a>
+    <a class="card" href="articles/sealant.html">
+      <div class="thumb" style="background-color:#232f3d;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">奥歯の溝を埋めるシーラントって 虫歯予防になるの？</div></div>
+    </a>
+    <a class="card" href="articles/sdf-silver.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">サホライド（SDF）で虫歯の進行は 止められるの？黒くなる？</div></div>
+    </a>
+    <a class="card" href="articles/rme-enuresis.html">
+      <div class="thumb" style="background-color:#17202b;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">おねしょが治らない… 上あごの拡大で改善するの？</div></div>
+    </a>
+    <a class="card" href="articles/pacifier-sids.html">
+      <div class="thumb" style="background-color:#1a222e;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">おしゃぶりって使っていいの？ SIDS対策になるって本当？</div></div>
+    </a>
+    <a class="card" href="articles/mft.html">
+      <div class="thumb" style="background-color:#1a222e;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">MFT（口の体操）ってどうするの？ 歯並びに効くの？</div></div>
+    </a>
+    <a class="card" href="articles/kids-malocclusion.html">
+      <div class="thumb" style="background-color:#232f3d;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">子どもの歯並び、 乳歯のうちからどうするの？</div></div>
+    </a>
+    <a class="card" href="articles/kids-chewing-obesity.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">食育</span><div class="card-title">早食い・よく噛まない子は 太りやすい？</div></div>
+    </a>
+    <a class="card" href="articles/fluoride-varnish.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">歯医者さんのフッ素塗布って どのくらい虫歯を防ぐの？</div></div>
+    </a>
+    <a class="card" href="articles/fluoride-rinse.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">フッ素のうがい（フッ化物洗口）って 子どもに必要？</div></div>
+    </a>
+    <a class="card" href="articles/early-ortho-class2.html">
+      <div class="thumb" style="background-color:#1b2430;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">出っ歯の子、 早めに矯正した方がいいの？</div></div>
+    </a>
+    <a class="card" href="articles/early-childhood-caries.html">
+      <div class="thumb" style="background-color:#1a222e;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">乳歯の虫歯、 何が原因でどう防ぐの？</div></div>
+    </a>
+    <a class="card" href="articles/breastfeeding-teeth.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">母乳育児って歯並びにいいの？ 論文で見る母乳と歯並び</div></div>
+    </a>
+    <a class="card" href="articles/baby-led-weaning.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">食育</span><div class="card-title">手づかみ食べ（BLW）ってどうするの？ 栄養は足りる？</div></div>
+    </a>
+    <a class="card" href="articles/baby-chewing.html">
+      <div class="thumb" style="background-color:#1a2733;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">食育</span><div class="card-title">赤ちゃんの&quot;噛む力&quot;って いつ育つの？</div></div>
+    </a>
+    <a class="card" href="articles/adenoid-face.html">
+      <div class="thumb" style="background-color:#17202b;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">口呼吸・お口ぽかん、顔つきや歯並びに影響するの？</div></div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="denture">
+  <h2><svg class="ico"><use href="#i-tooth"/></svg>入れ歯・お口の老化</h2>
+  <p class="sub">入れ歯のケア・オーラルフレイル・肺炎予防など、シニア世代のお口の健康。</p>
+  <div class="card-grid">
+    <!--CAT:denture-->
+    <a class="card" href="articles/teeth-longevity.html">
+      <div class="thumb" style="background-color:#1b2430;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">歯の数と寿命って 関係あるの？</div></div>
+    </a>
+    <a class="card" href="articles/shortened-dental-arch.html">
+      <div class="thumb" style="background-color:#1b2430;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">奥歯がなくても大丈夫？ 短縮歯列（ショートアーチ）って？</div></div>
+    </a>
+    <a class="card" href="articles/perioperative-oral.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">手術前の歯科受診（周術期口腔機能管理）って どうするの？</div></div>
+    </a>
+    <a class="card" href="articles/oral-hypofunction.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">口腔機能低下症って何？ チェック方法は？</div></div>
+    </a>
+    <a class="card" href="articles/oral-frailty.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">オーラルフレイルってどうするの？ 放置するとどうなる？</div></div>
+    </a>
+    <a class="card" href="articles/oral-care-pneumonia.html">
+      <div class="thumb" style="background-color:#1a2733;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">口腔ケアで肺炎って本当に防げるの？</div></div>
+    </a>
+    <a class="card" href="articles/implant-overdenture.html">
+      <div class="thumb" style="background-color:#17202b;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">下の総入れ歯が動く… インプラントで固定する治療は？</div></div>
+    </a>
+    <a class="card" href="articles/denture-stomatitis.html">
+      <div class="thumb" style="background-color:#1d2836;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">入れ歯の下が赤い・痛い… 義歯性口内炎ってどうするの？</div></div>
+    </a>
+    <a class="card" href="articles/denture-night.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">入れ歯は夜つけたまま 寝ていいの？</div></div>
+    </a>
+    <a class="card" href="articles/denture-cleaning.html">
+      <div class="thumb" style="background-color:#1a2733;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">入れ歯の洗浄って結局どうするの？ ブラシと洗浄剤どっち？</div></div>
+    </a>
+    <a class="card" href="articles/denture-adhesive.html">
+      <div class="thumb" style="background-color:#17202b;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">入れ歯安定剤って どう使うの？選び方は？</div></div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="implant">
+  <h2><svg class="ico"><use href="#i-implant"/></svg>インプラント</h2>
+  <p class="sub">寿命・周囲炎・喫煙や糖尿病との関係を、長期データから。</p>
+  <div class="card-grid">
+    <!--CAT:implant-->
+    <a class="card" href="articles/smoking-implant.html">
+      <div class="thumb" style="background-color:#17202b;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">タバコを吸っているとインプラントは 失敗しやすいの？</div></div>
+    </a>
+    <a class="card" href="articles/peri-implantitis.html">
+      <div class="thumb" style="background-color:#1f2a37;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">インプラント周囲炎ってどのくらい起こるの？ 頻度とケアを論文で</div></div>
+    </a>
+    <a class="card" href="articles/intraoral-scanner.html">
+      <div class="thumb" style="background-color:#1a2733;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">歯型取りが光スキャンに？ 口腔内スキャナーの精度は？</div></div>
+    </a>
+    <a class="card" href="articles/implant-maintenance.html">
+      <div class="thumb" style="background-color:#1f2a37;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">インプラントのメインテナンスって どのくらいの頻度？</div></div>
+    </a>
+    <a class="card" href="articles/implant-lifespan.html">
+      <div class="thumb" style="background-color:#1b2430;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">インプラントって 何年もつの？</div></div>
+    </a>
+    <a class="card" href="articles/diabetes-implant.html">
+      <div class="thumb" style="background-color:#232f3d;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">糖尿病でも インプラントできるの？</div></div>
+    </a>
+  </div>
+</section>
+
+<section class="section" id="sleep">
+  <h2><svg class="ico"><use href="#i-moon"/></svg>いびき・歯ぎしり</h2>
+  <p class="sub">ナイトガード・睡眠時無呼吸の口腔内装置など。</p>
+  <div class="card-grid">
+    <!--CAT:sleep-->
+    <a class="card" href="articles/osa-oral-appliance.html">
+      <div class="thumb" style="background-color:#232f3d;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯ぎしり</span><div class="card-title">いびき・睡眠時無呼吸の歯科マウスピース（OA）ってどうするの？ 効果を論文で</div></div>
+    </a>
+    <a class="card" href="articles/bruxism-splint.html">
+      <div class="thumb" style="background-color:#232f3d;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯ぎしり</span><div class="card-title">歯ぎしり対策のマウスピース （スプリント）ってどうするの？</div></div>
     </a>
   </div>
 </section>
@@ -117,19 +474,67 @@
   <p class="sub">論文ウォッチャーが見つけた最新研究から。監修者が承認したものを掲載。</p>
   <div class="card-grid">
     <!-- NEW-CARDS -->
-    <a class="card" href="articles/oral-care-pneumonia.html">
-      <div class="thumb" style="background-color:#1b2430;"></div>
+  </div>
+</section>
+
+<!-- ============ 歯科医師向け ============ -->
+<div class="layer" id="pro">
+  <span class="layer-tag layer-pro"><svg><use href="#i-scale"/></svg>歯科医師・医療従事者向け</span>
+  <h3>エビデンスを、臨床の言葉で。</h3>
+  <p>一次文献（PMID/DOI）ベースの臨床トピックと、項目別の論文データベース。</p>
+</div>
+
+<section class="section" style="padding-top:16px;">
+  <a class="prodb" href="for-dentists.html">
+    <div class="pd-ic"><svg><use href="#i-books"/></svg></div>
+    <div>
+      <div class="pd-t">論文データベース（項目別）</div>
+      <div class="pd-d">歯周・う蝕・義歯・インプラント・歯内・小児・カウンセリング…カテゴリ別に一次文献を一覧。PMID/DOI・一行知見つき。</div>
+    </div>
+  </a>
+  <h2 style="margin-top:34px;"><svg class="ico"><use href="#i-book"/></svg>臨床トピック</h2>
+  <p class="sub">根管治療・補綴・診断など、患者説明にも使えるエビデンス解説。</p>
+  <div class="card-grid">
+    <!--CAT:pro-->
+    <a class="card" href="articles/single-multi-visit.html">
+      <div class="thumb" style="background-color:#1f2a37;"></div>
       <div class="scrim"></div>
-      <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">口腔ケアで肺炎って本当に防げるの？</div></div>
+      <div class="ov"><span class="card-cat">歯内療法</span><div class="card-title">根管治療って 1回で終わらせていいの？</div></div>
+    </a>
+    <a class="card" href="articles/rubber-dam.html">
+      <div class="thumb" style="background-color:#202a38;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯内療法</span><div class="card-title">根管治療のラバーダムって 本当に必要なの？</div></div>
+    </a>
+    <a class="card" href="articles/root-canal-success.html">
+      <div class="thumb" style="background-color:#1a2733;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯内療法</span><div class="card-title">根管治療の成功率ってどのくらいなの？ 論文で見る歯内療法</div></div>
+    </a>
+    <a class="card" href="articles/pulp-capping-mta.html">
+      <div class="thumb" style="background-color:#232f3d;"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">歯内療法</span><div class="card-title">神経を残す治療（直接覆髄）って どうするの？MTAって？</div></div>
     </a>
   </div>
 </section>
 
-<section class="section" id="about">
-  <h2><svg class="ico"><use href="#i-book"/></svg>このサイトについて</h2>
-  <div class="callout key" style="max-width:720px;">
-    <div class="c-head"><svg class="ico"><use href="#i-book"/></svg>Dental Qの約束</div>
-    <p style="margin:0">記事はすべて<strong>実在する学術論文（PMID／DOIを明記）</strong>をもとに書いています。都合のいい研究だけでなく、<strong>研究の質や"利益相反（誰が資金を出したか）"まで正直に</strong>お伝えします。あなたが自分で判断できる材料を渡すのがこのサイトの役目です。</p>
+<!-- ============ 監修者プロフィール ============ -->
+<section class="section" id="profile">
+  <h2><svg class="ico"><use href="#i-user"/></svg>監修者プロフィール</h2>
+  <div class="profile-wrap">
+    <div class="author" style="margin-bottom:16px;">
+      <div class="author-avatar"><svg><use href="#i-user"/></svg></div>
+      <div class="author-body">
+        <div class="author-role"><svg><use href="#i-shield"/></svg>現役歯科医師・監修</div>
+        <div class="author-name">ジェイ院長<span class="lic">歯科医師（臨床10年）</span></div>
+        <div class="author-bio">歯科医院の<strong>院長</strong>。<strong>2つの歯科医院を監修</strong>し、別に<strong>株式会社</strong>も運営。日々の診療で患者さんに聞かれる疑問を、宣伝ではなく<strong>論文をもとに</strong>フェアに解説しています。</div>
+      </div>
+    </div>
+    <div class="callout key">
+      <div class="c-head"><svg class="ico"><use href="#i-book"/></svg>Dental Q の約束</div>
+      <p style="margin:0">記事はすべて<strong>実在する学術論文（PMID／DOIを明記）</strong>が根拠。都合のいい研究だけでなく、<strong>研究の質や利益相反（誰が資金を出したか）まで正直に</strong>お伝えし、あなたが自分で判断できる材料を渡します。</p>
+    </div>
   </div>
 </section>
 
@@ -137,13 +542,12 @@
   <div class="footer-inner">
     <a href="index.html" class="brand"><span class="wm-dental">DENTAL</span><span class="wm-sep"></span><b>Q</b></a>
     <div class="foot-links">
-      <a href="#oralcare">オーラルケア</a>
-      <a href="#kids">子どもの歯</a>
-      <a href="#">運営者情報</a>
-      <a href="#">プライバシーポリシー</a>
-      <a href="#">お問い合わせ</a>
+      <a href="index.html">記事一覧</a>
+      <a href="for-dentists.html">論文データベース</a>
+      <a href="about.html">運営者情報</a>
+      <a href="privacy.html">プライバシーポリシー</a>
     </div>
-    <div class="foot-copy">© 2026 Dental Q｜歯科の"ホント"を論文ベースでやさしく。本サイトはアフィリエイト広告を利用しています。</div>
+    <div class="foot-copy">© 2026 Dental Q｜歯科の"ホント"を論文ベースでやさしく。監修：ジェイ院長（歯科医師）。本サイトはアフィリエイト広告を利用しています。</div>
   </div>
 </footer>
 </body>

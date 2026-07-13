@@ -1,5 +1,4 @@
-# 内部作業ファイル（公開しない）
-article_queue.md
+article_queue*.md
 drafts/
 assets/img/_*.txt
 assets/img/CREDITS.txt
