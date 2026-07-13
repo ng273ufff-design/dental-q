@@ -4,7 +4,7 @@
 (function () {
   'use strict';
   // ★★★ 計測ID（当面はマネとくのを流用。専用プロパティ作成後はここを差し替え） ★★★
-  const GA4_ID = 'G-0NQHWCG4YM';    // ※マネとくと共用。GA4はホスト名で分離可
+  const GA4_ID = 'G-448XLVYJSC';    // Dental Q 専用プロパティ（2026-07作成）
   const CLARITY_ID = 'wpude6ryte';  // ※マネとくと共用
   const GAS_TRACKER = '';           // 独自ダッシュボードは後日（Dental Q専用GAS作成時に設定）
 
