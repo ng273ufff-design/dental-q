@@ -20,6 +20,9 @@
   --line-soft:#eef2f5;
   --ok:#2a52c9;
   --warn:#c2410c;
+  --danger:#c0322b;       /* 危機喚起（赤） */
+  --win:#0f7a52;          /* お得・メリット（緑） */
+  --win-tint:#e4f5ec;
   /* radius / shadow */
   --r:16px;
   --r-sm:10px;
@@ -127,6 +130,37 @@ h1{
 .callout.key{border-left:4px solid var(--brand);background:linear-gradient(180deg,var(--brand-tint),transparent 62%);}
 .callout.warn{border-left:4px solid var(--warn);}
 .callout.warn .c-head{color:var(--warn);} .callout.warn .c-head .ico{color:var(--warn);}
+/* 危機喚起（赤）とお得（緑）*/
+.callout.danger{border-left:4px solid var(--danger);background:linear-gradient(180deg,#fdeceb,transparent 62%);}
+.callout.danger .c-head{color:var(--danger);} .callout.danger .c-head .ico{color:var(--danger);}
+.callout.win{border-left:4px solid var(--win);background:linear-gradient(180deg,var(--win-tint),transparent 62%);}
+.callout.win .c-head{color:var(--win);} .callout.win .c-head .ico{color:var(--win);}
+
+/* ============ データ可視化（数値・グラフ）============ */
+.dataviz{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);
+  box-shadow:var(--shadow-sm);padding:20px 22px;margin:26px 0;}
+.dataviz .dv-head{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink);font-size:15px;margin-bottom:4px;}
+.dataviz .dv-head .ico{width:19px;height:19px;color:var(--brand);}
+.dataviz .dv-note{font-size:11.5px;color:var(--muted);margin-bottom:16px;}
+/* 大きな数字スタッツ */
+.dv-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:6px;}
+.dv-stat{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:14px 16px;text-align:center;}
+.dv-stat .dv-num{font-size:30px;font-weight:800;color:var(--brand-strong);line-height:1.1;letter-spacing:-.01em;}
+.dv-stat .dv-num small{font-size:15px;font-weight:800;margin-left:2px;}
+.dv-stat.is-danger .dv-num{color:var(--danger);}
+.dv-stat.is-win .dv-num{color:var(--win);}
+.dv-stat .dv-lab{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5;}
+/* 横棒グラフ */
+.dv-bars{display:flex;flex-direction:column;gap:12px;margin-top:16px;}
+.dv-bar .dv-bl{display:block;font-size:12.5px;font-weight:700;color:var(--text);margin-bottom:5px;}
+.dv-bar .dv-row{display:flex;align-items:center;gap:10px;}
+.dv-track{flex:1;height:15px;background:var(--line-soft);border-radius:999px;overflow:hidden;}
+.dv-track i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#3a63de,#2a52c9);}
+.dv-track i.is-win{background:linear-gradient(90deg,#17a06c,#0f7a52);}
+.dv-track i.is-muted{background:#b6c0cc;}
+.dv-track i.is-danger{background:linear-gradient(90deg,#d8524b,#c0322b);}
+.dv-bar .dv-bv{flex-shrink:0;font-size:13px;font-weight:800;color:var(--ink);min-width:52px;text-align:right;}
+@media(max-width:480px){.dv-stat .dv-num{font-size:25px;}}
 
 /* ---- エビデンス（論文引用）ボックス：このブログの看板 ---- */
 .evidence{
@@ -205,10 +239,11 @@ tbody tr:nth-child(even) td{background:#fafcfc;}
 }
 .author-avatar{
   width:52px;height:52px;flex-shrink:0;border-radius:50%;
-  background:linear-gradient(135deg,#2a52c9,#1e3fa6);color:#fff;
+  background:#10151b;color:#fff;
   display:flex;align-items:center;justify-content:center;
 }
-.author-avatar svg{width:30px;height:30px;stroke:#fff;stroke-width:1.7;fill:none;}
+.author-avatar svg{display:none;}
+.author-avatar::before{content:"J";color:#fff;font-weight:800;font-size:25px;line-height:1;letter-spacing:.01em;}
 .author-body{flex:1;min-width:0;}
 .author-role{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;letter-spacing:.03em;color:var(--brand-strong);background:var(--brand-tint);padding:3px 10px;border-radius:999px;margin-bottom:6px;}
 .author-role svg{width:13px;height:13px;stroke:currentColor;stroke-width:2.2;fill:none;}
