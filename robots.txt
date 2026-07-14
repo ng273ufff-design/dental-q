@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Disallow: /picks.html
+
+Sitemap: https://ng273ufff-design.github.io/dental-q/sitemap.xml
