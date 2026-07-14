@@ -26,8 +26,21 @@
   .prodb .pd-t{font-size:17px;font-weight:800;color:#f3f5f6;}
   .prodb .pd-d{font-size:13px;color:#9fb0bd;margin-top:3px;}
   .profile-wrap{max-width:820px;margin:0 auto;}
-  .hero-author{max-width:900px;margin:0 auto;padding:20px 22px 0;}
-  .hero-author .author{margin:0;}
+  .hero-author{max-width:1080px;margin:0 auto;padding:26px 22px 4px;}
+  .hero-author .author{margin:0;padding:26px 30px;gap:22px;border-radius:20px;border-width:1px;box-shadow:0 2px 6px rgba(19,42,58,.06),0 14px 34px rgba(19,42,58,.08);}
+  .hero-author .author-avatar{width:78px;height:78px;}
+  .hero-author .author-avatar::before{font-size:38px;}
+  .hero-author .author-role{font-size:13px;padding:5px 14px;margin-bottom:9px;}
+  .hero-author .author-role svg{width:15px;height:15px;}
+  .hero-author .author-name{font-size:22px;}
+  .hero-author .author-name .lic{font-size:13px;margin-left:11px;}
+  .hero-author .author-bio{font-size:14.5px;line-height:1.75;margin-top:7px;}
+  .hero-author .author-verify svg{width:36px;height:36px;}
+  .hero-author .author-verify span{font-size:11px;}
+  @media(max-width:560px){
+    .hero-author .author{flex-direction:column;align-items:flex-start;padding:22px;}
+    .hero-author .author-name{font-size:19px;}
+  }
 </style>
 <script defer src="assets/analytics.js"></script>
 </head>
