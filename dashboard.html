@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アクセス解析｜Dental Q（管理用）</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  body{background:var(--bg);}
+  .dash-head{background:linear-gradient(160deg,#0d1013,#10151b 55%,#1e3fa6);color:#fff;padding:26px 22px;}
+  .dash-inner{max-width:1080px;margin:0 auto;}
+  .dash-brand{display:inline-flex;align-items:baseline;gap:3px;font-weight:800;letter-spacing:.06em;font-size:22px;margin-bottom:8px;}
+  .dash-brand .wm-dental{color:#dbe3ee;} .dash-brand b{color:#fff;}
+  .dash-head h1{font-size:20px;font-weight:900;}
+  .dash-head .sub{font-size:12.5px;color:rgba(255,255,255,.7);margin-top:4px;}
+  .dash-wrap{max-width:1080px;margin:0 auto;padding:20px 16px 50px;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px;}
+  .kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow-sm);}
+  .kpi .k-lab{font-size:12px;color:var(--muted);font-weight:700;}
+  .kpi .k-val{font-size:30px;font-weight:900;color:var(--brand-strong);line-height:1.1;margin-top:6px;letter-spacing:-.01em;}
+  .kpi .k-sub{font-size:11.5px;color:var(--muted);margin-top:4px;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow-sm);margin-bottom:16px;}
+  .card h2{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+  .card .desc{font-size:11.5px;color:var(--muted);margin-bottom:14px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:720px){.grid2{grid-template-columns:1fr;}}
+  /* 横棒 */
+  .bar-row{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+  .bar-lab{font-size:12.5px;color:var(--text);width:38%;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .bar-track{flex:1;height:16px;background:var(--line-soft);border-radius:999px;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#3a63de,#2a52c9);}
+  .bar-val{font-size:12.5px;font-weight:800;color:var(--ink);min-width:38px;text-align:right;}
+  .empty{text-align:center;color:var(--muted);font-size:13px;padding:26px 10px;}
+  .note{font-size:11px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.7;}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted);margin-top:10px;}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle;}
+  svg{display:block;width:100%;height:auto;}
+  .status{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;}
+  .status.ok{background:var(--win-tint);color:var(--win);} .status.wait{background:#fdece9;color:var(--warn);}
+</style>
+</head>
+<body>
+<header class="dash-head">
+  <div class="dash-inner">
+    <div class="dash-brand"><span class="wm-dental">DENTAL</span>&nbsp;<b>Q</b></div>
+    <h1>アクセス解析ダッシュボード</h1>
+    <div class="sub">サイトの訪問状況を項目別に可視化（管理用・非公開）｜<span id="range"></span> <span id="conn" class="status wait">接続待ち</span></div>
+  </div>
+</header>
+
+<div class="dash-wrap">
+  <div class="kpis" id="kpis"></div>
+
+  <div class="card">
+    <h2>📈 訪問数の推移（日別・直近30日）</h2>
+    <div class="desc">1日あたりのページ閲覧数。トレンドを把握できます。</div>
+    <div id="trend"></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>📄 人気ページ TOP10</h2>
+      <div class="desc">よく読まれている記事。ここが人気＝需要のあるテーマ。</div>
+      <div id="pages"></div>
+    </div>
+    <div class="card">
+      <h2>🗂 カテゴリ別の閲覧</h2>
+      <div class="desc">どのジャンルに関心が集まっているか。</div>
+      <div id="cats"></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>🔗 流入元（リファラー）</h2>
+      <div class="desc">どこから来たか。検索・SNS・直接など。</div>
+      <div id="refs"></div>
+    </div>
+    <div class="card">
+      <h2>📱 デバイス</h2>
+      <div class="desc">スマホ／PCの比率。画面幅768px未満をスマホと判定。</div>
+      <div id="devs"></div>
+    </div>
+  </div>
+
+  <div class="note">
+    データソース：Dental Q 自前トラッカー（GAS）。より詳細な分析はGA4（G-448XLVYJSC）も併用できます。<br>
+    ※このページは <code>noindex</code> の管理用ページです。URLを共有しない限り検索には出ません。
+  </div>
+</div>
+
+<script>
+// ====== 設定：GASウェブアプリのURL（デプロイ後にここへ貼る）======
+const GAS_URL = ""; // 例: https://script.google.com/macros/s/xxxx/exec
+
+// slug → 表示名・カテゴリ（グラフのラベル用・主要分）
+const CAT = {oralcare:'オーラルケア',whitening:'ホワイトニング',perio:'歯周・全身',denture:'入れ歯・高齢',implant:'インプラント',sleep:'いびき・歯ぎしり',kids:'子ども・食育',pro:'歯科医師向け',other:'その他'};
+const SLUGCAT = {'electric-toothbrush':'oralcare','floss-interdental':'oralcare','fluoride-ppm':'oralcare','mouthwash':'oralcare','chx-mouthwash':'oralcare','full-mouth-vs-quadrant':'oralcare','tongue-halitosis':'oralcare','mi-paste-remin':'oralcare','sensitivity-toothpaste':'oralcare','xylitol':'oralcare','sugar-caries':'oralcare','gingivitis-plaque':'oralcare','regular-cleaning':'oralcare','whitening-toothpaste':'whitening','whitening-home':'whitening','keep-teeth-30y':'perio','perio-heart':'perio','perio-diabetes':'perio','perio-staging':'perio','spt-maintenance':'perio','spt-tooth-loss':'perio','srp-scaling':'perio','recall-interval':'perio','resin-infiltration':'perio','root-canal-success':'perio','rubber-dam':'perio','pulp-capping-mta':'perio','single-multi-visit':'perio','perioperative-oral':'perio','intraoral-scanner':'perio','ceramic-crown':'perio','denture-cleaning':'denture','denture-night':'denture','denture-adhesive':'denture','denture-stomatitis':'denture','shortened-dental-arch':'denture','oral-frailty':'denture','oral-hypofunction':'denture','oral-care-pneumonia':'denture','teeth-longevity':'denture','implant-overdenture':'implant','implant-lifespan':'implant','peri-implantitis':'implant','implant-maintenance':'implant','diabetes-implant':'implant','smoking-implant':'implant','bruxism-splint':'sleep','osa-oral-appliance':'sleep','sdf-silver':'kids','sealant':'kids','fluoride-varnish':'kids','fluoride-rinse':'kids','early-childhood-caries':'kids','kids-malocclusion':'kids','early-ortho-class2':'kids','mft':'kids','rme-enuresis':'kids','adenoid-face':'kids','mouth-breathing':'kids','teeth-eruption':'kids','breastfeeding-teeth':'kids','tongue-tie':'kids','pacifier-sids':'kids','pacifier-thumb':'kids','baby-chewing':'kids','baby-led-weaning':'kids','kids-chewing-obesity':'kids','chewing':'kids','index':'その他','picks':'その他','for-dentists':'pro','about':'その他'};
+
+const $ = id => document.getElementById(id);
+const esc = s => (s+'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+
+function barList(el, items, color){
+  if(!items.length){ el.innerHTML='<div class="empty">データがまだありません</div>'; return; }
+  const max = Math.max(...items.map(i=>i.v),1);
+  el.innerHTML = items.map(i=>`<div class="bar-row"><span class="bar-lab" title="${esc(i.k)}">${esc(i.k)}</span><div class="bar-track"><div class="bar-fill" style="width:${Math.max(3,i.v/max*100)}%${color?';background:'+color:''}"></div></div><span class="bar-val">${i.v}</span></div>`).join('');
+}
+
+function areaChart(el, series){ // series: [{date, v}]
+  if(!series.length){ el.innerHTML='<div class="empty">データがまだありません</div>'; return; }
+  const W=900,H=220,P=28;
+  const max=Math.max(...series.map(s=>s.v),1);
+  const n=series.length;
+  const x=i=>P+ (W-2*P)*(n<=1?0.5:i/(n-1));
+  const y=v=>H-P-(H-2*P)*(v/max);
+  const pts=series.map((s,i)=>[x(i),y(s.v)]);
+  const line=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+  const area=`M${x(0).toFixed(1)} ${(H-P)} `+pts.map(p=>'L'+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ')+` L${x(n-1).toFixed(1)} ${(H-P)} Z`;
+  const gl=[0,.5,1].map(f=>{const yy=P+(H-2*P)*f; const val=Math.round(max*(1-f)); return `<line x1="${P}" y1="${yy}" x2="${W-P}" y2="${yy}" stroke="#eef2f5"/><text x="4" y="${yy+4}" font-size="11" fill="#98a4b0">${val}</text>`;}).join('');
+  const lbl=series.map((s,i)=> (i%Math.ceil(n/6)===0||i===n-1) ? `<text x="${x(i)}" y="${H-8}" font-size="10" fill="#98a4b0" text-anchor="middle">${s.date.slice(5)}</text>`:'').join('');
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a52c9" stop-opacity=".28"/><stop offset="1" stop-color="#2a52c9" stop-opacity="0"/></linearGradient></defs>${gl}<path d="${area}" fill="url(#ag)"/><path d="${line}" fill="none" stroke="#2a52c9" stroke-width="2.5" stroke-linejoin="round"/>${lbl}</svg>`;
+}
+
+function render(data){
+  $('conn').className='status ok'; $('conn').textContent='接続OK';
+  const daily=data.daily||[], pages=data.pages||[], refs=data.referrers||[], devs=data.devices||[];
+  const total=daily.reduce((a,d)=>a+d.v,0);
+  const today=daily.length?daily[daily.length-1].v:0;
+  const avg=daily.length?Math.round(total/daily.length):0;
+  $('range').textContent = daily.length? `${daily[0].date} 〜 ${daily[daily.length-1].date}`:'';
+  $('kpis').innerHTML=[['総ページ閲覧',total,'直近30日'],['今日',today,'本日ぶん'],['1日平均',avg,'直近30日'],['計測ページ数',pages.length,'ユニーク']]
+    .map(k=>`<div class="kpi"><div class="k-lab">${k[0]}</div><div class="k-val">${k[1].toLocaleString()}</div><div class="k-sub">${k[2]}</div></div>`).join('');
+  areaChart($('trend'), daily);
+  barList($('pages'), pages.slice(0,10).map(p=>({k:(p.slug in SLUGCAT? p.slug:p.slug), v:p.v})));
+  // カテゴリ集計
+  const catAgg={};
+  pages.forEach(p=>{const c=SLUGCAT[p.slug]||'other'; catAgg[c]=(catAgg[c]||0)+p.v;});
+  barList($('cats'), Object.entries(catAgg).map(([k,v])=>({k:CAT[k]||k,v})).sort((a,b)=>b.v-a.v));
+  barList($('refs'), refs.slice(0,8).map(r=>({k:r.ref||'直接/不明',v:r.v})), 'linear-gradient(90deg,#17a06c,#0f7a52)');
+  barList($('devs'), devs.map(d=>({k:d.type==='mobile'?'スマホ':d.type==='desktop'?'PC':d.type,v:d.v})), 'linear-gradient(90deg,#7c8794,#4a545f)');
+}
+
+// JSONPでGASから取得（CORS回避）
+function load(){
+  if(!GAS_URL){ document.querySelectorAll('#trend,#pages,#cats,#refs,#devs').forEach(e=>e.innerHTML='<div class="empty">GAS_URL 未設定です。トラッカーをデプロイしてこのページ上部の GAS_URL に貼ると、ここにグラフが表示されます。</div>'); return; }
+  window.__render=render;
+  const s=document.createElement('script');
+  s.src=GAS_URL+(GAS_URL.includes('?')?'&':'?')+'callback=__render&_='+Date.now();
+  s.onerror=()=>{$('conn').textContent='接続失敗';};
+  document.body.appendChild(s);
+}
+load();
+</script>
+</body>
+</html>
