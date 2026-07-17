@@ -372,3 +372,6 @@ tbody tr:nth-child(even) td{background:#fafcfc;}
   font-size:12px;font-weight:700;color:#5b6b7f;}
 .shop-ad .tag{background:#10151b;color:#fff;font-weight:800;letter-spacing:.06em;
   padding:4px 9px;border-radius:5px;font-size:11px;}
+
+/* 広告主公式リンク（A8提携プログラム）用ボタン */
+.shop-opt .so-btns a.so-o{background:#10151b;color:#fff!important;border:1.4px solid #10151b;}
