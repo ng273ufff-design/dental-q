@@ -375,3 +375,18 @@ tbody tr:nth-child(even) td{background:#fafcfc;}
 
 /* 広告主公式リンク（A8提携プログラム）用ボタン */
 .shop-opt .so-btns a.so-o{background:#10151b;color:#fff!important;border:1.4px solid #10151b;}
+
+/* ===== 参考文献（バンクーバー方式／ICMJE） ===== */
+.refs{margin:44px 0 8px;padding:26px 28px;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--r);}
+.refs h2{font-size:19px;font-weight:800;color:var(--ink);margin:0 0 16px;
+  padding-bottom:10px;border-bottom:2px solid var(--line);}
+.ref-list{list-style:none;margin:0;padding:0;counter-reset:none;}
+.ref-list li{font-size:13px;line-height:1.85;color:#3d4b5c;margin-bottom:12px;
+  padding-left:26px;text-indent:-26px;word-break:break-word;}
+.ref-list .ref-n{font-weight:800;color:var(--brand-strong);margin-right:4px;}
+.ref-list a{color:var(--brand-strong);font-weight:700;text-decoration:none;
+  border-bottom:1px solid rgba(42,82,201,.35);}
+.ref-list a:hover{border-bottom-color:var(--brand-strong);}
+.ref-note{font-size:11.5px;color:var(--muted);margin-top:14px;padding-top:12px;
+  border-top:1px solid var(--line-soft);line-height:1.7;}
