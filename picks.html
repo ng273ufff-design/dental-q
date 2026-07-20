@@ -46,6 +46,18 @@
   .lp-prof .pn{font-weight:800;font-size:14px;color:var(--ink);} .lp-prof .pb{font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.55;}
   .lp-links{text-align:center;margin-top:22px;display:flex;flex-direction:column;gap:10px;}
   .lp-links a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px;font-weight:700;color:var(--ink)!important;box-shadow:var(--shadow-sm);}
+
+  /* picks-upgrade */
+  .pk-nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 3px 12px rgba(19,42,58,.05);}
+  .pk-nav-inner{max-width:560px;margin:0 auto;display:flex;gap:7px;overflow-x:auto;padding:9px 14px;scrollbar-width:none;}
+  .pk-nav-inner::-webkit-scrollbar{display:none;}
+  .pk-nav a{flex-shrink:0;font-size:12.5px;font-weight:800;color:var(--ink);background:#f1f4f8;border:1px solid var(--line);border-radius:999px;padding:6px 13px;text-decoration:none;white-space:nowrap;transition:background .12s,color .12s;}
+  .pk-nav a:hover,.pk-nav a:active{background:var(--brand);color:#fff;border-color:var(--brand);}
+  .cat{scroll-margin-top:52px;}
+  .pk-rank{width:27px;height:27px;flex-shrink:0;border-radius:50%;background:#eef1f6;color:var(--muted);font-weight:900;font-size:13px;display:grid;place-items:center;}
+  .pk-rank.top{background:linear-gradient(135deg,#2a52c9,#5f96ff);color:#fff;box-shadow:0 2px 8px rgba(42,82,201,.3);}
+  .pk-pick{display:inline-block;font-size:10px;font-weight:800;color:#fff;background:var(--accent,#e8563f);border-radius:5px;padding:2px 7px;margin-left:8px;vertical-align:middle;letter-spacing:.03em;}
+  .cat-note{font-size:11.5px;color:var(--muted);padding:9px 16px 0;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -69,6 +81,18 @@
   <div class="lp-ad"><span class="tag">広告</span>本ページのリンクは広告（アフィリエイト）です。購入により当サイトに収益が発生する場合があります。</div>
 </header>
 
+<nav class="pk-nav" aria-label="カテゴリで探す">
+  <div class="pk-nav-inner">
+    <a href="#oralcare">毎日のケア</a>
+    <a href="#whitening">ホワイトニング</a>
+    <a href="#perio">歯周・歯ぐき</a>
+    <a href="#denture">入れ歯</a>
+    <a href="#implant">インプラント</a>
+    <a href="#sleep">いびき・歯ぎしり</a>
+    <a href="#kids">子ども・赤ちゃん</a>
+  </div>
+</nav>
+
 <div class="lp-wrap">
 
   <section class="cat" id="oralcare">
@@ -76,15 +100,18 @@
       <img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
       <div class="cat-h"><span class="cat-ey"><svg class="ico"><use href="#i-sparkle"/></svg>歯ブラシ・フロス・フッ素・洗口液</span><span class="cat-t">毎日のオーラルケア</span></div>
     </div>
+    <div class="cat-note">歯科医の視点で「まず選ぶなら」の順に並べています（①＝イチオシ）。</div>
     <div class="pk-list">
       <div class="pk">
-        <div class="pk-info"><div class="pk-name">音波式電動歯ブラシ</div><div class="pk-note">微振動で歯垢を落とす定番タイプ</div></div>
+        <div class="pk-rank top">1</div>
+        <div class="pk-info"><div class="pk-name">音波式電動歯ブラシ<span class="pk-pick">イチオシ</span></div><div class="pk-note">微振動で歯垢を落とす定番タイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%259F%25B3%25E6%25B3%25A2%25E5%25BC%258F%2520%25E9%259B%25BB%25E5%258B%2595%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%259F%25B3%25E6%25B3%25A2%25E5%25BC%258F%2520%25E9%259B%25BB%25E5%258B%2595%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
           <a class="pk-a" href="https://www.amazon.co.jp/s?k=%E9%9F%B3%E6%B3%A2%E5%BC%8F%20%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7&tag=ng273uf-22" target="_blank" rel="sponsored nofollow noopener">Amazon</a>
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">2</div>
         <div class="pk-info"><div class="pk-name">回転式（オシレーティング）</div><div class="pk-note">研究でやや優位と報告される方式</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%259B%259E%25E8%25BB%25A2%25E5%25BC%258F%2520%25E9%259B%25BB%25E5%258B%2595%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%259B%259E%25E8%25BB%25A2%25E5%25BC%258F%2520%25E9%259B%25BB%25E5%258B%2595%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -92,6 +119,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">3</div>
         <div class="pk-info"><div class="pk-name">替えブラシ</div><div class="pk-note">毛先が開いたら交換を</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%259B%25BB%25E5%258B%2595%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2520%25E6%259B%25BF%25E3%2581%2588%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%259B%25BB%25E5%258B%2595%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2520%25E6%259B%25BF%25E3%2581%2588%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -99,6 +127,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">4</div>
         <div class="pk-info"><div class="pk-name">Y字フロス（ホルダー型）</div><div class="pk-note">奥歯にも届きやすく初心者向け</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25AB%25E3%2583%2595%25E3%2583%25AD%25E3%2582%25B9%2520Y%25E5%25AD%2597%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25AB%25E3%2583%2595%25E3%2583%25AD%25E3%2582%25B9%2520Y%25E5%25AD%2597%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -106,6 +135,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">5</div>
         <div class="pk-info"><div class="pk-name">糸巻きフロス（ロールタイプ）</div><div class="pk-note">好きな長さで使えてコスパ良好</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25AB%25E3%2583%2595%25E3%2583%25AD%25E3%2582%25B9%2520%25E7%25B3%25B8%25E5%25B7%25BB%25E3%2581%258D%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25AB%25E3%2583%2595%25E3%2583%25AD%25E3%2582%25B9%2520%25E7%25B3%25B8%25E5%25B7%25BB%25E3%2581%258D%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -113,6 +143,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">6</div>
         <div class="pk-info"><div class="pk-name">歯間ブラシ</div><div class="pk-note">すき間がある人に。サイズ展開が豊富</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E9%2596%2593%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E9%2596%2593%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -120,6 +151,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">7</div>
         <div class="pk-info"><div class="pk-name">高濃度フッ素歯磨き粉（1450ppm）</div><div class="pk-note">大人がまず選ぶ基本の濃度</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%25201450ppm%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%25201450ppm%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -127,6 +159,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">8</div>
         <div class="pk-info"><div class="pk-name">こども用フッ素歯磨き粉</div><div class="pk-note">年齢に合わせた濃度・量のもの</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AD%2590%25E4%25BE%259B%2520%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AD%2590%25E4%25BE%259B%2520%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -134,6 +167,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">9</div>
         <div class="pk-info"><div class="pk-name">フッ素洗口液</div><div class="pk-note">歯みがきに足す毎日のうがいケア</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -141,6 +175,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">10</div>
         <div class="pk-info"><div class="pk-name">エッセンシャルオイル系</div><div class="pk-note">歯垢・歯肉炎の減少に。毎日使いやすい</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%2520%25E3%2582%25A8%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A3%25E3%2583%25AB%25E3%2582%25AA%25E3%2582%25A4%25E3%2583%25AB%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%2520%25E3%2582%25A8%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A3%25E3%2583%25AB%25E3%2582%25AA%25E3%2582%25A4%25E3%2583%25AB%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -148,6 +183,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">11</div>
         <div class="pk-info"><div class="pk-name">ノンアルコール・低刺激系</div><div class="pk-note">刺激が苦手な人でも続けやすい</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%2520%25E3%2583%258E%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AB%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%2520%25E3%2583%258E%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AB%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -155,6 +191,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">12</div>
         <div class="pk-info"><div class="pk-name">液体歯磨きタイプ</div><div class="pk-note">口に含んでから磨く。すすぎ用と役割が違う</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B6%25B2%25E4%25BD%2593%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B6%25B2%25E4%25BD%2593%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -162,6 +199,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">13</div>
         <div class="pk-info"><div class="pk-name">クロルヘキシジン配合洗口液</div><div class="pk-note">短期・目的を絞って使う殺菌タイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%25AB%25E3%2583%2598%25E3%2582%25AD%25E3%2582%25B7%25E3%2582%25B8%25E3%2583%25B3%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%25AB%25E3%2583%2598%25E3%2582%25AD%25E3%2582%25B7%25E3%2582%25B8%25E3%2583%25B3%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -169,6 +207,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">14</div>
         <div class="pk-info"><div class="pk-name">低刺激・ノンアルコール洗口液</div><div class="pk-note">日常づかいはマイルドなものを</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2520%25E3%2583%258E%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AB%2520%25E4%25BD%258E%25E5%2588%25BA%25E6%25BF%2580%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2520%25E3%2583%258E%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AB%2520%25E4%25BD%258E%25E5%2588%25BA%25E6%25BF%2580%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -176,6 +215,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">15</div>
         <div class="pk-info"><div class="pk-name">ステインケア歯磨き粉</div><div class="pk-note">着色が気になるときの仕上げに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B9%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B1%25E3%2582%25A2%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B9%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B1%25E3%2582%25A2%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -183,6 +223,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">16</div>
         <div class="pk-info"><div class="pk-name">歯周ケア用マウスウォッシュ</div><div class="pk-note">毎日のケアに足す一手</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%2591%25A8%25E7%2597%2585%25E4%25BA%2588%25E9%2598%25B2%2520%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%2591%25A8%25E7%2597%2585%25E4%25BA%2588%25E9%2598%25B2%2520%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -190,6 +231,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">17</div>
         <div class="pk-info"><div class="pk-name">ワンタフトブラシ</div><div class="pk-note">磨き残しやすい歯周ポケットに届く</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25AF%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2595%25E3%2583%2588%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25AF%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2595%25E3%2583%2588%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -197,6 +239,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">18</div>
         <div class="pk-info"><div class="pk-name">舌クリーナー（舌ブラシ・ヘラ型）</div><div class="pk-note">舌の丸みに沿ってやさしくかき出す</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E8%2588%258C%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%258A%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E8%2588%258C%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%258A%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -204,6 +247,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">19</div>
         <div class="pk-info"><div class="pk-name">口臭ケア用マウスウォッシュ</div><div class="pk-note">舌みがきに足す毎日のケアに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2587%25AD%2520%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2587%25AD%2520%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -211,6 +255,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">20</div>
         <div class="pk-info"><div class="pk-name">MIペースト（CPP-ACP）</div><div class="pk-note">寝る前に塗って残す上乗せケア。牛乳由来</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FMI%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2588%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FMI%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2588%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -218,6 +263,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">21</div>
         <div class="pk-info"><div class="pk-name">硝酸カリウム配合歯磨き粉</div><div class="pk-note">神経の刺激を鎮めるタイプ。継続使用向け</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2520%25E7%25A1%259D%25E9%2585%25B8%25E3%2582%25AB%25E3%2583%25AA%25E3%2582%25A6%25E3%2583%25A0%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2520%25E7%25A1%259D%25E9%2585%25B8%25E3%2582%25AB%25E3%2583%25AA%25E3%2582%25A6%25E3%2583%25A0%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -225,6 +271,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">22</div>
         <div class="pk-info"><div class="pk-name">乳酸アルミニウム配合歯磨き粉</div><div class="pk-note">象牙質の管をふさぐ方向で働くタイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2520%25E4%25B9%25B3%25E9%2585%25B8%25E3%2582%25A2%25E3%2583%25AB%25E3%2583%259F%25E3%2583%258B%25E3%2582%25A6%25E3%2583%25A0%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2520%25E4%25B9%25B3%25E9%2585%25B8%25E3%2582%25A2%25E3%2583%25AB%25E3%2583%259F%25E3%2583%258B%25E3%2582%25A6%25E3%2583%25A0%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -232,6 +279,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">23</div>
         <div class="pk-info"><div class="pk-name">知覚過敏用歯磨き粉（全般）</div><div class="pk-note">まず試したいときの入り口に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -239,6 +287,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">24</div>
         <div class="pk-info"><div class="pk-name">キシリトール100%ガム</div><div class="pk-note">甘味料がキシリトールのみのものを</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AD%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2520%25E3%2582%25AC%25E3%2583%25A0%2520100%2525%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AD%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2520%25E3%2582%25AC%25E3%2583%25A0%2520100%2525%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -246,6 +295,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">25</div>
         <div class="pk-info"><div class="pk-name">キシリトールタブレット</div><div class="pk-note">ガムが噛めない場面の一手に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AD%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2520%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AC%25E3%2583%2583%25E3%2583%2588%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AD%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2520%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AC%25E3%2583%2583%25E3%2583%2588%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -253,6 +303,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">26</div>
         <div class="pk-info"><div class="pk-name">キシリトールガム</div><div class="pk-note">間食後・食後すぐ磨けない場面に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AD%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2520%25E3%2582%25AC%25E3%2583%25A0%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AD%25E3%2582%25B7%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2520%25E3%2582%25AC%25E3%2583%25A0%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -260,6 +311,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">27</div>
         <div class="pk-info"><div class="pk-name">代替甘味料（エリスリトール等）</div><div class="pk-note">料理・飲み物の砂糖を置き換える</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25A8%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2520%25E7%2594%2598%25E5%2591%25B3%25E6%2596%2599%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25A8%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2520%25E7%2594%2598%25E5%2591%25B3%25E6%2596%2599%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -267,6 +319,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">28</div>
         <div class="pk-info"><div class="pk-name">電動歯ブラシ</div><div class="pk-note">一定の動きで磨き残しを減らしやすい</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%259B%25BB%25E5%258B%2595%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%259B%25BB%25E5%258B%2595%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -274,6 +327,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">29</div>
         <div class="pk-info"><div class="pk-name">歯垢染色剤</div><div class="pk-note">磨き残しを見える化してチェック</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%259E%25A2%25E6%259F%2593%25E8%2589%25B2%25E5%2589%25A4%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%259E%25A2%25E6%259F%2593%25E8%2589%25B2%25E5%2589%25A4%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -281,6 +335,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">30</div>
         <div class="pk-info"><div class="pk-name">デンタルフロス</div><div class="pk-note">歯ブラシが届きにくい歯間のプラークに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25AB%25E3%2583%2595%25E3%2583%25AD%25E3%2582%25B9%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25AB%25E3%2583%2595%25E3%2583%25AD%25E3%2582%25B9%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -294,15 +349,18 @@
       <img src="assets/img/whitening.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
       <div class="cat-h"><span class="cat-ey"><svg class="ico"><use href="#i-star"/></svg>歯磨き粉・ホームケア</span><span class="cat-t">ホワイトニング・着色ケア</span></div>
     </div>
+    <div class="cat-note">歯科医の視点で「まず選ぶなら」の順に並べています（①＝イチオシ）。</div>
     <div class="pk-list">
       <div class="pk">
-        <div class="pk-info"><div class="pk-name">ホワイトニング歯磨き粉</div><div class="pk-note">毎日の着色ケアに使われる定番タイプ</div></div>
+        <div class="pk-rank top">1</div>
+        <div class="pk-info"><div class="pk-name">ホワイトニング歯磨き粉<span class="pk-pick">イチオシ</span></div><div class="pk-note">毎日の着色ケアに使われる定番タイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259B%25E3%2583%25AF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259B%25E3%2583%25AF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
           <a class="pk-a" href="https://www.amazon.co.jp/s?k=%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%8B%E3%83%B3%E3%82%B0%E6%AD%AF%E7%A3%A8%E3%81%8D%E7%B2%89&tag=ng273uf-22" target="_blank" rel="sponsored nofollow noopener">Amazon</a>
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">2</div>
         <div class="pk-info"><div class="pk-name">ステイン除去 歯磨き粉</div><div class="pk-note">茶渋・ヤニなどの着色汚れが気になる方に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B9%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E9%2599%25A4%25E5%258E%25BB%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B9%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E9%2599%25A4%25E5%258E%25BB%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -310,6 +368,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">3</div>
         <div class="pk-info"><div class="pk-name">ホームホワイトニング キット</div><div class="pk-note">自宅で使うセルフケアの定番タイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259B%25E3%2583%25BC%25E3%2583%25A0%25E3%2583%259B%25E3%2583%25AF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259B%25E3%2583%25BC%25E3%2583%25A0%25E3%2583%259B%25E3%2583%25AF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -317,6 +376,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">4</div>
         <div class="pk-info"><div class="pk-name">マウスピース型 ホワイトニング</div><div class="pk-note">トレーにのせて使うタイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25BC%25E3%2582%25B9%2520%25E3%2583%259B%25E3%2583%25AF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25BC%25E3%2582%25B9%2520%25E3%2583%259B%25E3%2583%25AF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -324,6 +384,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">5</div>
         <div class="pk-info"><div class="pk-name">知覚過敏 歯磨き粉</div><div class="pk-note">しみやすい方の併用ケアに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -337,15 +398,18 @@
       <img src="assets/img/dental-model.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
       <div class="cat-h"><span class="cat-ey"><svg class="ico"><use href="#i-shield"/></svg>歯間ブラシ・タフト・洗口液</span><span class="cat-t">歯周・歯ぐきケア</span></div>
     </div>
+    <div class="cat-note">歯科医の視点で「まず選ぶなら」の順に並べています（①＝イチオシ）。</div>
     <div class="pk-list">
       <div class="pk">
-        <div class="pk-info"><div class="pk-name">歯周病予防 洗口液</div><div class="pk-note">ブラッシングを補う補助ケアに</div></div>
+        <div class="pk-rank top">1</div>
+        <div class="pk-info"><div class="pk-name">歯周病予防 洗口液<span class="pk-pick">イチオシ</span></div><div class="pk-note">ブラッシングを補う補助ケアに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%2591%25A8%25E7%2597%2585%25E4%25BA%2588%25E9%2598%25B2%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%2591%25A8%25E7%2597%2585%25E4%25BA%2588%25E9%2598%25B2%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
           <a class="pk-a" href="https://www.amazon.co.jp/s?k=%E6%AD%AF%E5%91%A8%E7%97%85%E4%BA%88%E9%98%B2%20%E6%B4%97%E5%8F%A3%E6%B6%B2&tag=ng273uf-22" target="_blank" rel="sponsored nofollow noopener">Amazon</a>
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">2</div>
         <div class="pk-info"><div class="pk-name">タフトブラシ</div><div class="pk-note">磨き残しやすい部位のピンポイント清掃に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25BF%25E3%2583%2595%25E3%2583%2588%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25BF%25E3%2583%2595%25E3%2583%2588%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -353,6 +417,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">3</div>
         <div class="pk-info"><div class="pk-name">洗口液（低刺激タイプ）</div><div class="pk-note">ブラッシングを補う補助ケアに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -360,6 +425,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">4</div>
         <div class="pk-info"><div class="pk-name">歯間ブラシ（サイズ別）</div><div class="pk-note">すき間の大きさに合わせて選ぶタイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E9%2596%2593%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2520%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25BA%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E9%2596%2593%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2520%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25BA%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -367,6 +433,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">5</div>
         <div class="pk-info"><div class="pk-name">洗口液</div><div class="pk-note">ブラッシングを補う補助ケアに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -374,6 +441,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">6</div>
         <div class="pk-info"><div class="pk-name">知覚過敏用歯磨き粉</div><div class="pk-note">しみやすい方向けの処方</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%259F%25A5%25E8%25A6%259A%25E9%2581%258E%25E6%2595%258F%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -381,6 +449,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">7</div>
         <div class="pk-info"><div class="pk-name">歯周病予防の洗口液</div><div class="pk-note">ブラッシングの補助に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%2591%25A8%25E7%2597%2585%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%2591%25A8%25E7%2597%2585%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -388,6 +457,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">8</div>
         <div class="pk-info"><div class="pk-name">歯垢染色剤（染め出し液）</div><div class="pk-note">磨き残しの確認に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%259E%25A2%25E6%259F%2593%25E8%2589%25B2%25E5%2589%25A4%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%259E%25A2%25E6%259F%2593%25E8%2589%25B2%25E5%2589%25A4%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -395,6 +465,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">9</div>
         <div class="pk-info"><div class="pk-name">デンタルミラー</div><div class="pk-note">見えにくい部分の確認に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25AB%25E3%2583%259F%25E3%2583%25A9%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2587%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25AB%25E3%2583%259F%25E3%2583%25A9%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -402,6 +473,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">10</div>
         <div class="pk-info"><div class="pk-name">フッ素配合歯磨き粉</div><div class="pk-note">毎日のケアの定番</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -409,6 +481,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">11</div>
         <div class="pk-info"><div class="pk-name">口腔保湿ジェル</div><div class="pk-note">口の乾燥が気になる方に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2585%2594%25E4%25BF%259D%25E6%25B9%25BF%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25AB%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2585%2594%25E4%25BF%259D%25E6%25B9%25BF%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25AB%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -416,6 +489,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">12</div>
         <div class="pk-info"><div class="pk-name">口腔ケアスポンジ</div><div class="pk-note">粘膜の清掃・介護ケアに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2585%2594%25E3%2582%25B1%25E3%2582%25A2%2520%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25B3%25E3%2582%25B8%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2585%2594%25E3%2582%25B1%25E3%2582%25A2%2520%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25B3%25E3%2582%25B8%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -429,15 +503,18 @@
       <img src="assets/img/denture-cast.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
       <div class="cat-h"><span class="cat-ey"><svg class="ico"><use href="#i-tooth"/></svg>洗浄剤・保湿・入れ歯ブラシ</span><span class="cat-t">入れ歯・口腔ケア</span></div>
     </div>
+    <div class="cat-note">歯科医の視点で「まず選ぶなら」の順に並べています（①＝イチオシ）。</div>
     <div class="pk-list">
       <div class="pk">
-        <div class="pk-info"><div class="pk-name">入れ歯洗浄剤</div><div class="pk-note">つけ置きタイプの洗浄剤</div></div>
+        <div class="pk-rank top">1</div>
+        <div class="pk-info"><div class="pk-name">入れ歯洗浄剤<span class="pk-pick">イチオシ</span></div><div class="pk-note">つけ置きタイプの洗浄剤</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%2520%25E6%25B4%2597%25E6%25B5%2584%25E5%2589%25A4%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%2520%25E6%25B4%2597%25E6%25B5%2584%25E5%2589%25A4%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
           <a class="pk-a" href="https://www.amazon.co.jp/s?k=%E5%85%A5%E3%82%8C%E6%AD%AF%20%E6%B4%97%E6%B5%84%E5%89%A4&tag=ng273uf-22" target="_blank" rel="sponsored nofollow noopener">Amazon</a>
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">2</div>
         <div class="pk-info"><div class="pk-name">入れ歯用ブラシ</div><div class="pk-note">こびりつく汚れの物理的な清掃に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%2520%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%2520%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -445,6 +522,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">3</div>
         <div class="pk-info"><div class="pk-name">入れ歯保管ケース</div><div class="pk-note">洗浄・持ち運び用の容器に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%2520%25E4%25BF%259D%25E7%25AE%25A1%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B9%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%2520%25E4%25BF%259D%25E7%25AE%25A1%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B9%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -452,6 +530,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">4</div>
         <div class="pk-info"><div class="pk-name">入れ歯安定剤</div><div class="pk-note">クリーム・粉末・シートなどタイプ別</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%25E5%25AE%2589%25E5%25AE%259A%25E5%2589%25A4%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%25E5%25AE%2589%25E5%25AE%259A%25E5%2589%25A4%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -459,6 +538,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">5</div>
         <div class="pk-info"><div class="pk-name">入れ歯洗浄剤（除菌タイプ）</div><div class="pk-note">つけ置きでお手入れしたい方に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%2520%25E9%2599%25A4%25E8%258F%258C%2520%25E6%25B4%2597%25E6%25B5%2584%25E5%2589%25A4%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2585%25A5%25E3%2582%258C%25E6%25AD%25AF%2520%25E9%2599%25A4%25E8%258F%258C%2520%25E6%25B4%2597%25E6%25B5%2584%25E5%2589%25A4%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -466,6 +546,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">6</div>
         <div class="pk-info"><div class="pk-name">舌ブラシ</div><div class="pk-note">舌の汚れをやさしく清掃</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E8%2588%258C%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E8%2588%258C%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -473,6 +554,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">7</div>
         <div class="pk-info"><div class="pk-name">咀嚼トレーニングガム</div><div class="pk-note">噛む力の維持を意識したい方に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2592%2580%25E5%259A%25BC%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%2520%25E3%2582%25AC%25E3%2583%25A0%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2592%2580%25E5%259A%25BC%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%2520%25E3%2582%25AC%25E3%2583%25A0%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -486,15 +568,18 @@
       <img src="assets/img/implant.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
       <div class="cat-h"><span class="cat-ey"><svg class="ico"><use href="#i-implant"/></svg>専用歯間ブラシ・ウォーターフロス</span><span class="cat-t">インプラントのセルフケア</span></div>
     </div>
+    <div class="cat-note">歯科医の視点で「まず選ぶなら」の順に並べています（①＝イチオシ）。</div>
     <div class="pk-list">
       <div class="pk">
-        <div class="pk-info"><div class="pk-name">インプラント用歯間ブラシ</div><div class="pk-note">被せ物と歯ぐきの境目のプラークに</div></div>
+        <div class="pk-rank top">1</div>
+        <div class="pk-info"><div class="pk-name">インプラント用歯間ブラシ<span class="pk-pick">イチオシ</span></div><div class="pk-note">被せ物と歯ぐきの境目のプラークに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2588%25E7%2594%25A8%25E6%25AD%25AF%25E9%2596%2593%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2588%25E7%2594%25A8%25E6%25AD%25AF%25E9%2596%2593%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
           <a class="pk-a" href="https://www.amazon.co.jp/s?k=%E3%82%A4%E3%83%B3%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88%E7%94%A8%E6%AD%AF%E9%96%93%E3%83%96%E3%83%A9%E3%82%B7&tag=ng273uf-22" target="_blank" rel="sponsored nofollow noopener">Amazon</a>
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">2</div>
         <div class="pk-info"><div class="pk-name">口腔洗浄器(ウォーターフロス)</div><div class="pk-note">届きにくい隙間を水流で洗い流す</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2585%2594%25E6%25B4%2597%25E6%25B5%2584%25E5%2599%25A8%2520%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%2595%25E3%2583%25AD%25E3%2582%25B9%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2585%2594%25E6%25B4%2597%25E6%25B5%2584%25E5%2599%25A8%2520%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%2595%25E3%2583%25AD%25E3%2582%25B9%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -502,6 +587,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">3</div>
         <div class="pk-info"><div class="pk-name">ノンアルコール洗口液</div><div class="pk-note">刺激が少なく毎日続けやすいタイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%258E%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AB%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%258E%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AB%2520%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -515,15 +601,18 @@
       <img src="assets/img/mouth-breathing.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
       <div class="cat-h"><span class="cat-ey"><svg class="ico"><use href="#i-moon"/></svg>マウスピース・口テープ</span><span class="cat-t">いびき・歯ぎしり</span></div>
     </div>
+    <div class="cat-note">歯科医の視点で「まず選ぶなら」の順に並べています（①＝イチオシ）。</div>
     <div class="pk-list">
       <div class="pk">
-        <div class="pk-info"><div class="pk-name">市販のナイトガード(マウスピース)</div><div class="pk-note">セルフケア用。歯科で作る装置の代わりにはなりません</div></div>
+        <div class="pk-rank top">1</div>
+        <div class="pk-info"><div class="pk-name">市販のナイトガード(マウスピース)<span class="pk-pick">イチオシ</span></div><div class="pk-note">セルフケア用。歯科で作る装置の代わりにはなりません</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%258A%25E3%2582%25A4%25E3%2583%2588%25E3%2582%25AC%25E3%2583%25BC%25E3%2583%2589%2520%25E6%25AD%25AF%25E3%2581%258E%25E3%2581%2597%25E3%2582%258A%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%258A%25E3%2582%25A4%25E3%2583%2588%25E3%2582%25AC%25E3%2583%25BC%25E3%2583%2589%2520%25E6%25AD%25AF%25E3%2581%258E%25E3%2581%2597%25E3%2582%258A%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
           <a class="pk-a" href="https://www.amazon.co.jp/s?k=%E3%83%8A%E3%82%A4%E3%83%88%E3%82%AC%E3%83%BC%E3%83%89%20%E6%AD%AF%E3%81%8E%E3%81%97%E3%82%8A&tag=ng273uf-22" target="_blank" rel="sponsored nofollow noopener">Amazon</a>
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">2</div>
         <div class="pk-info"><div class="pk-name">マウスピース洗浄剤</div><div class="pk-note">ナイトガードを清潔に保ちたいときに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25BC%25E3%2582%25B9%2520%25E6%25B4%2597%25E6%25B5%2584%25E5%2589%25A4%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25BC%25E3%2582%25B9%2520%25E6%25B4%2597%25E6%25B5%2584%25E5%2589%25A4%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -531,6 +620,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">3</div>
         <div class="pk-info"><div class="pk-name">市販のいびき対策マウスピース</div><div class="pk-note">セルフケア用。歯科・医科で作る装置の代わりにはなりません</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2584%25E3%2581%25B3%25E3%2581%258D%2520%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25BC%25E3%2582%25B9%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2584%25E3%2581%25B3%25E3%2581%258D%2520%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25BC%25E3%2582%25B9%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -538,6 +628,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">4</div>
         <div class="pk-info"><div class="pk-name">口閉じテープ(睡眠用)</div><div class="pk-note">睡眠中の口呼吸が気になるときに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E9%2596%2589%25E3%2581%2598%2520%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2520%25E7%259D%25A1%25E7%259C%25A0%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E9%2596%2589%25E3%2581%2598%2520%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2520%25E7%259D%25A1%25E7%259C%25A0%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -551,15 +642,18 @@
       <img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
       <div class="cat-h"><span class="cat-ey"><svg class="ico"><use href="#i-child"/></svg>フッ素・仕上げ磨き・歯固め</span><span class="cat-t">子ども・赤ちゃん</span></div>
     </div>
+    <div class="cat-note">歯科医の視点で「まず選ぶなら」の順に並べています（①＝イチオシ）。</div>
     <div class="pk-list">
       <div class="pk">
-        <div class="pk-info"><div class="pk-name">子ども用歯ブラシ</div><div class="pk-note">年齢に合ったヘッドサイズを選んで</div></div>
+        <div class="pk-rank top">1</div>
+        <div class="pk-info"><div class="pk-name">子ども用歯ブラシ<span class="pk-pick">イチオシ</span></div><div class="pk-note">年齢に合ったヘッドサイズを選んで</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AD%2590%25E4%25BE%259B%2520%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AD%2590%25E4%25BE%259B%2520%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
           <a class="pk-a" href="https://www.amazon.co.jp/s?k=%E5%AD%90%E4%BE%9B%20%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7&tag=ng273uf-22" target="_blank" rel="sponsored nofollow noopener">Amazon</a>
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">2</div>
         <div class="pk-info"><div class="pk-name">こども用フッ素ジェル</div><div class="pk-note">年齢に応じた濃度・味を選べます</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2593%25E3%2581%25A9%25E3%2582%2582%2520%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25AB%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2593%25E3%2581%25A9%25E3%2582%2582%2520%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25AB%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -567,6 +661,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">3</div>
         <div class="pk-info"><div class="pk-name">仕上げ磨き用歯ブラシ</div><div class="pk-note">保護者が磨きやすい細ハンドルタイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E4%25BB%2595%25E4%25B8%258A%25E3%2581%2592%25E7%25A3%25A8%25E3%2581%258D%2520%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E4%25BB%2595%25E4%25B8%258A%25E3%2581%2592%25E7%25A3%25A8%25E3%2581%258D%2520%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -574,6 +669,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">4</div>
         <div class="pk-info"><div class="pk-name">子ども用フッ素ジェル</div><div class="pk-note">仕上げ磨きに塗るタイプ。低刺激の商品が多い</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2593%25E3%2581%25A9%25E3%2582%2582%2520%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25AB%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2593%25E3%2581%25A9%25E3%2582%2582%2520%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%25AB%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -581,6 +677,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">5</div>
         <div class="pk-info"><div class="pk-name">子ども用フッ素入り歯みがき粉</div><div class="pk-note">毎日のブラッシング用。年齢に合う濃度を確認</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AD%2590%25E3%2581%25A9%25E3%2582%2582%2520%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AD%2590%25E3%2581%25A9%25E3%2582%2582%2520%25E3%2583%2595%25E3%2583%2583%25E7%25B4%25A0%2520%25E6%25AD%25AF%25E7%25A3%25A8%25E3%2581%258D%25E7%25B2%2589%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -588,6 +685,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">6</div>
         <div class="pk-info"><div class="pk-name">フッ化物洗口液（ミラノール 等）</div><div class="pk-note">うがいでお口全体に。継続しやすい定番タイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%2583%25E5%258C%2596%25E7%2589%25A9%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2520%25E3%2583%259F%25E3%2583%25A9%25E3%2583%258E%25E3%2583%25BC%25E3%2583%25AB%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%2583%25E5%258C%2596%25E7%2589%25A9%25E6%25B4%2597%25E5%258F%25A3%25E6%25B6%25B2%2520%25E3%2583%259F%25E3%2583%25A9%25E3%2583%258E%25E3%2583%25BC%25E3%2583%25AB%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -595,6 +693,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">7</div>
         <div class="pk-info"><div class="pk-name">口腔筋トレーナー（子ども用）</div><div class="pk-note">口まわりの筋トレ用グッズ。歯並びの治療器具ではありません</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2585%2594%25E7%25AD%258B%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258A%25E3%2583%25BC%2520%25E5%25AD%2590%25E4%25BE%259B%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%2585%2594%25E7%25AD%258B%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258A%25E3%2583%25BC%2520%25E5%25AD%2590%25E4%25BE%259B%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -602,6 +701,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">8</div>
         <div class="pk-info"><div class="pk-name">あいうべ体操グッズ・ポスター</div><div class="pk-note">お口・舌の体操を親子で続けるための教材</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2582%25E3%2581%2584%25E3%2581%2586%25E3%2581%25B9%25E4%25BD%2593%25E6%2593%258D%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2582%25E3%2581%2584%25E3%2581%2586%25E3%2581%25B9%25E4%25BD%2593%25E6%2593%258D%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -609,6 +709,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">9</div>
         <div class="pk-info"><div class="pk-name">子ども用スポーツマウスガード</div><div class="pk-note">前に出た前歯をぶつけやすい運動時の保護に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25AC%25E3%2583%25BC%25E3%2583%2589%2520%25E5%25AD%2590%25E4%25BE%259B%2520%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2584%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259E%25E3%2582%25A6%25E3%2582%25B9%25E3%2582%25AC%25E3%2583%25BC%25E3%2583%2589%2520%25E5%25AD%2590%25E4%25BE%259B%2520%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2584%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -616,6 +717,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">10</div>
         <div class="pk-info"><div class="pk-name">口輪筋トレーナー</div><div class="pk-note">くわえて口まわりの筋肉を動かすタイプ</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%25BC%25AA%25E7%25AD%258B%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258A%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E8%25BC%25AA%25E7%25AD%258B%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258A%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -623,6 +725,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">11</div>
         <div class="pk-info"><div class="pk-name">口閉じテープ</div><div class="pk-note">就寝時に口を閉じる習慣づけの補助に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E9%2596%2589%25E3%2581%2598%2520%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2520%25E5%25AD%2590%25E4%25BE%259B%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E9%2596%2589%25E3%2581%2598%2520%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2520%25E5%25AD%2590%25E4%25BE%259B%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -630,6 +733,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">12</div>
         <div class="pk-info"><div class="pk-name">口閉じテープ（子ども用）</div><div class="pk-note">就寝時に口を閉じる習慣づけの補助に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E9%2596%2589%25E3%2581%2598%2520%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2520%25E5%25AD%2590%25E4%25BE%259B%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E9%2596%2589%25E3%2581%2598%2520%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2520%25E5%25AD%2590%25E4%25BE%259B%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -637,6 +741,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">13</div>
         <div class="pk-info"><div class="pk-name">鼻腔拡張テープ</div><div class="pk-note">鼻の通りをサポートするタイプ。鼻づまり対策に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%25BC%25BB%25E8%2585%2594%25E6%258B%25A1%25E5%25BC%25B5%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%25BC%25BB%25E8%2585%2594%25E6%258B%25A1%25E5%25BC%25B5%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -644,6 +749,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">14</div>
         <div class="pk-info"><div class="pk-name">おねしょ対策 防水シーツ</div><div class="pk-note">寝具の汚れ対策に。改善までの負担を軽く</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%258A%25E3%2581%25AD%25E3%2581%2597%25E3%2582%2587%2520%25E9%2598%25B2%25E6%25B0%25B4%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2584%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%258A%25E3%2581%25AD%25E3%2581%2597%25E3%2582%2587%2520%25E9%2598%25B2%25E6%25B0%25B4%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2584%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -651,6 +757,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">15</div>
         <div class="pk-info"><div class="pk-name">子ども用口閉じテープ</div><div class="pk-note">まず鼻づまりの有無を確認してから。使用上の注意も確認を</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E9%2596%2589%25E3%2581%2598%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2520%25E5%25AD%2590%25E4%25BE%259B%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258F%25A3%25E9%2596%2589%25E3%2581%2598%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2597%2520%25E5%25AD%2590%25E4%25BE%259B%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -658,6 +765,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">16</div>
         <div class="pk-info"><div class="pk-name">鼻呼吸トレーナー</div><div class="pk-note">口まわりの習慣づけのサポートに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%25BC%25BB%25E5%2591%25BC%25E5%2590%25B8%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258A%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%25BC%25BB%25E5%2591%25BC%25E5%2590%25B8%2520%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258A%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -665,6 +773,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">17</div>
         <div class="pk-info"><div class="pk-name">歯固め（ティーザー）</div><div class="pk-note">にぎりやすい形。歯ぐきのムズムズ期に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%259B%25BA%25E3%2582%2581%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%259B%25BA%25E3%2582%2581%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -672,6 +781,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">18</div>
         <div class="pk-info"><div class="pk-name">乳歯用歯ブラシ</div><div class="pk-note">最初の1本が生えたらデビュー用に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E4%25B9%25B3%25E6%25AD%25AF%2520%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E4%25B9%25B3%25E6%25AD%25AF%2520%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -679,6 +789,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">19</div>
         <div class="pk-info"><div class="pk-name">ベビー用歯みがきナップ</div><div class="pk-note">ブラシを嫌がる時期の拭き取りケアに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%2520%25E6%25AD%25AF%25E3%2581%25BF%25E3%2581%258C%25E3%2581%258D%2520%25E3%2583%258A%25E3%2583%2583%25E3%2583%2597%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%2520%25E6%25AD%25AF%25E3%2581%25BF%25E3%2581%258C%25E3%2581%258D%2520%25E3%2583%258A%25E3%2583%2583%25E3%2583%2597%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -686,6 +797,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">20</div>
         <div class="pk-info"><div class="pk-name">授乳クッション</div><div class="pk-note">姿勢を支えて授乳をラクに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%258E%2588%25E4%25B9%25B3%25E3%2582%25AF%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%258E%2588%25E4%25B9%25B3%25E3%2582%25AF%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -693,6 +805,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">21</div>
         <div class="pk-info"><div class="pk-name">乳歯ブラシ</div><div class="pk-note">歯が生えたら仕上げ磨きに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E4%25B9%25B3%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E4%25B9%25B3%25E6%25AD%25AF%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25B7%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -700,6 +813,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">22</div>
         <div class="pk-info"><div class="pk-name">ベビー綿棒歯みがき</div><div class="pk-note">ブラシ前の口まわり慣らしに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%2520%25E7%25B6%25BF%25E6%25A3%2592%2520%25E6%25AD%25AF%25E3%2581%25BF%25E3%2581%258C%25E3%2581%258D%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%2520%25E7%25B6%25BF%25E6%25A3%2592%2520%25E6%25AD%25AF%25E3%2581%25BF%25E3%2581%258C%25E3%2581%258D%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -707,6 +821,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">23</div>
         <div class="pk-info"><div class="pk-name">乳頭保護器（ニップルシールド）</div><div class="pk-note">吸わせ方のサポートに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E4%25B9%25B3%25E9%25A0%25AD%25E4%25BF%259D%25E8%25AD%25B7%25E5%2599%25A8%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E4%25B9%25B3%25E9%25A0%25AD%25E4%25BF%259D%25E8%25AD%25B7%25E5%2599%25A8%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -714,6 +829,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">24</div>
         <div class="pk-info"><div class="pk-name">新生児用おしゃぶり</div><div class="pk-note">月齢サイズを選んで。使用上の注意も確認を</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%258A%25E3%2581%2597%25E3%2582%2583%25E3%2581%25B6%25E3%2582%258A%2520%25E6%2596%25B0%25E7%2594%259F%25E5%2585%2590%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%258A%25E3%2581%2597%25E3%2582%2583%25E3%2581%25B6%25E3%2582%258A%2520%25E6%2596%25B0%25E7%2594%259F%25E5%2585%2590%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -721,6 +837,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">25</div>
         <div class="pk-info"><div class="pk-name">ベビーモニター</div><div class="pk-note">睡眠中の見守りに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%25E3%2583%25A2%25E3%2583%258B%25E3%2582%25BF%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%25E3%2583%25A2%25E3%2583%258B%25E3%2582%25BF%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -728,6 +845,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">26</div>
         <div class="pk-info"><div class="pk-name">ベビースリーパー</div><div class="pk-note">あおむけ寝のかけ布団代わりに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2591%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2591%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -735,6 +853,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">27</div>
         <div class="pk-info"><div class="pk-name">歯固め（カミカミ用）</div><div class="pk-note">噛む動きの練習に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%259B%25BA%25E3%2582%2581%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25AD%25AF%25E5%259B%25BA%25E3%2582%2581%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -742,6 +861,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">28</div>
         <div class="pk-info"><div class="pk-name">離乳食 調理セット</div><div class="pk-note">月齢に合った固さの用意に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%259B%25A2%25E4%25B9%25B3%25E9%25A3%259F%2520%25E8%25AA%25BF%25E7%2590%2586%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%259B%25A2%25E4%25B9%25B3%25E9%25A3%259F%2520%25E8%25AA%25BF%25E7%2590%2586%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -749,6 +869,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">29</div>
         <div class="pk-info"><div class="pk-name">ベビー食器・カトラリー</div><div class="pk-note">自分で食べる練習に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%25E9%25A3%259F%25E5%2599%25A8%2520%25E3%2582%25AB%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%25E9%25A3%259F%25E5%2599%25A8%2520%25E3%2582%25AB%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -756,6 +877,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">30</div>
         <div class="pk-info"><div class="pk-name">吸盤付きBLWプレート</div><div class="pk-note">ひっくり返りにくく手づかみ向き</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FBLW%2520%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%2520%25E5%2590%25B8%25E7%259B%25A4%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FBLW%2520%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%2520%25E5%2590%25B8%25E7%259B%25A4%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -763,6 +885,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">31</div>
         <div class="pk-info"><div class="pk-name">お食事エプロン</div><div class="pk-note">こぼしても片づけがラクに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%258A%25E9%25A3%259F%25E4%25BA%258B%25E3%2582%25A8%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%2520%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%258A%25E9%25A3%259F%25E4%25BA%258B%25E3%2582%25A8%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%2520%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -770,6 +893,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">32</div>
         <div class="pk-info"><div class="pk-name">ベビーカトラリー</div><div class="pk-note">手づかみから道具へ移行する練習に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%2520%25E3%2582%25AB%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2599%25E3%2583%2593%25E3%2583%25BC%2520%25E3%2582%25AB%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -777,6 +901,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">33</div>
         <div class="pk-info"><div class="pk-name">仕切り付き食育プレート</div><div class="pk-note">量が見やすく食べすぎ防止に</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%25A3%259F%25E8%2582%25B2%2520%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%2520%25E4%25BB%2595%25E5%2588%2587%25E3%2582%258A%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%25A3%259F%25E8%2582%25B2%2520%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%2520%25E4%25BB%2595%25E5%2588%2587%25E3%2582%258A%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -784,6 +909,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">34</div>
         <div class="pk-info"><div class="pk-name">子ども用カトラリー</div><div class="pk-note">ひと口サイズで食べるペース作りに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AD%2590%25E3%2581%25A9%25E3%2582%2582%2520%25E3%2582%25AB%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AD%2590%25E3%2581%25A9%25E3%2582%2582%2520%25E3%2582%25AB%25E3%2583%2588%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -791,6 +917,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">35</div>
         <div class="pk-info"><div class="pk-name">噛みごたえのあるおやつ</div><div class="pk-note">よく噛む習慣づくりに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2599%259B%25E3%2581%25BF%25E3%2581%2594%25E3%2581%259F%25E3%2581%2588%2520%25E3%2581%258A%25E3%2582%2584%25E3%2581%25A4%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2599%259B%25E3%2581%25BF%25E3%2581%2594%25E3%2581%259F%25E3%2581%2588%2520%25E3%2581%258A%25E3%2582%2584%25E3%2581%25A4%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>
@@ -798,6 +925,7 @@
         </div>
       </div>
       <div class="pk">
+        <div class="pk-rank">36</div>
         <div class="pk-info"><div class="pk-name">食育教材・絵本</div><div class="pk-note">噛むことを楽しく学ぶきっかけに</div></div>
         <div class="pk-btns">
           <a class="pk-r" href="https://hb.afl.rakuten.co.jp/hgc/55bbd74f.887a6a47.55bbd750.5159022b/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%25A3%259F%25E8%2582%25B2%2520%25E6%2595%2599%25E6%259D%2590%2F&m=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%25A3%259F%25E8%2582%25B2%2520%25E6%2595%2599%25E6%259D%2590%2F" target="_blank" rel="sponsored nofollow noopener">楽天</a>

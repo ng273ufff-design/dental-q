@@ -41,8 +41,30 @@
     .hero-author .author{flex-direction:column;align-items:flex-start;padding:22px;}
     .hero-author .author-name{font-size:19px;}
   }
+  /* ===== カテゴリ・検索バナー ===== */
+  .catbar{position:sticky;top:80px;z-index:49;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 14px rgba(19,42,58,.05);}
+  .catbar-inner{max-width:1080px;margin:0 auto;padding:12px 22px;display:flex;flex-direction:column;gap:10px;}
+  .catbar-search{position:relative;display:flex;align-items:center;gap:10px;background:var(--brand-tint);border:1px solid var(--line);border-radius:999px;padding:11px 18px;}
+  .catbar-search>svg{width:18px;height:18px;stroke:var(--brand-strong);stroke-width:2;fill:none;flex-shrink:0;}
+  .catbar-search input{border:0;background:transparent;outline:none;font-size:15px;width:100%;color:var(--ink);}
+  .dq-results{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 34px rgba(19,42,58,.16);max-height:62vh;overflow:auto;z-index:60;padding:6px;}
+  .dq-results a{display:block;padding:11px 14px;border-radius:10px;text-decoration:none;color:var(--ink);}
+  .dq-results a:hover,.dq-results a.act{background:var(--brand-tint);}
+  .dq-results .rc{font-size:11.5px;color:var(--brand-strong);font-weight:800;margin-bottom:2px;letter-spacing:.02em;}
+  .dq-results .rt{font-weight:700;font-size:14.5px;line-height:1.4;}
+  .dq-results .rd{font-size:12px;color:var(--muted);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .dq-none{padding:16px;color:var(--muted);font-size:14px;text-align:center;}
+  .catbar-chips{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .catbar-chips::-webkit-scrollbar{display:none;}
+  .catbar-chips a{flex-shrink:0;font-size:13px;font-weight:700;color:var(--ink);background:#f1f4f8;border:1px solid var(--line);border-radius:999px;padding:7px 15px;text-decoration:none;white-space:nowrap;transition:background .12s,color .12s;}
+  .catbar-chips a:hover{background:var(--brand);color:#fff;border-color:var(--brand);}
+  @media(max-width:560px){.catbar-inner{padding:10px 14px;}}
 </style>
 <script defer src="assets/analytics.js"></script>
+<script defer src="assets/search-index.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Dental Q","url":"https://ng273ufff-design.github.io/dental-q/","potentialAction":{"@type":"SearchAction","target":"https://ng273ufff-design.github.io/dental-q/?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
 </head>
 <body>
 
@@ -74,16 +96,25 @@
   </div>
 </header>
 
-<!-- ============ 監修者カード（最上部） ============ -->
-<div class="hero-author">
-  <div class="author">
-    <div class="author-avatar"></div>
-    <div class="author-body">
-      <div class="author-role"><svg><use href="#i-shield"/></svg>現役歯科医師が回答・監修</div>
-      <div class="author-name">ジェイ院長<span class="lic">歯科医師・臨床10年</span></div>
-      <div class="author-bio">歯科医院の<strong>院長</strong>。2院の監修と会社経営も手がける。診療で患者さんに聞かれる疑問を、宣伝ではなく<strong>論文をもとに</strong>フェアに解説します。</div>
+<!-- ============ カテゴリ・検索バナー ============ -->
+<div class="catbar">
+  <div class="catbar-inner">
+    <div class="catbar-search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="dq-search" type="search" placeholder="記事を検索（フロス・フッ素・ホワイトニング…）" autocomplete="off" aria-label="記事を検索">
+      <div id="dq-results" class="dq-results" role="listbox" hidden></div>
     </div>
-    <div class="author-verify"><svg><use href="#i-book"/></svg><span>EBM</span></div>
+    <nav class="catbar-chips" aria-label="カテゴリで探す">
+      <a href="#oralcare">オーラルケア</a>
+      <a href="#whitening">ホワイトニング</a>
+      <a href="#perio">歯周・全身</a>
+      <a href="#kids">子ども・食育</a>
+      <a href="#denture">入れ歯・老化</a>
+      <a href="#implant">インプラント</a>
+      <a href="#sleep">いびき・歯ぎしり</a>
+      <a href="#update">昔の常識 vs 最新</a>
+      <a href="#pro">歯科医師向け</a>
+    </nav>
   </div>
 </div>
 
@@ -143,7 +174,7 @@
     </a>
     <!--CAT:daily-->
     <a class="card" href="articles/fluoride-safety.html">
-      <div class="thumb" style="background-color:#182430;"><img src="assets/img/fluoride-ppm.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#182430;"><img src="assets/img/manual-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">フッ素は体に悪いの？ 安全性を論文で</div></div>
     </a>
@@ -153,7 +184,7 @@
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯磨きは何分・1日何回すればいいの？</div></div>
     </a>
     <a class="card" href="articles/brushing-method.html">
-      <div class="thumb" style="background-color:#1a2431;"><img src="assets/img/manual-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a2431;"><img src="assets/img/bristle-closeup.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯の磨き方って 結局どれが正解？</div></div>
     </a>
@@ -163,17 +194,17 @@
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯ブラシっていつ替えるの？</div></div>
     </a>
     <a class="card" href="articles/brush-head-size.html">
-      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/manual-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/interdental-brush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯ブラシのヘッドは 小さい方がいいの？</div></div>
     </a>
     <a class="card" href="articles/bristle-stiffness.html">
-      <div class="thumb" style="background-color:#161b22;"><img src="assets/img/bristle-closeup.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#161b22;"><img src="assets/img/toothpaste-tube.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯ブラシの硬さは やわらかめとふつう、どっち？</div></div>
     </a>
     <a class="card" href="articles/tapered-bristles.html">
-      <div class="thumb" style="background-color:#1b2632;"><img src="assets/img/bristle-closeup.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1b2632;"><img src="assets/img/mouthwash.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">先細毛とラウンド毛、どっちがいいの？</div></div>
     </a>
@@ -183,7 +214,7 @@
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">酸蝕歯（歯が酸で溶ける）ってどうするの？</div></div>
     </a>
     <a class="card" href="articles/charcoal-toothpaste.html">
-      <div class="thumb" style="background-color:#161b22;"><img src="assets/img/toothpaste-tube.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#161b22;"><img src="assets/img/tongue-cleaner.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">炭（チャコール）の歯磨き粉って 安全なの？</div></div>
     </a>
@@ -198,7 +229,7 @@
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯にヒビ（亀裂）が入ると どうなるの？</div></div>
     </a>
     <a class="card" href="articles/dry-mouth.html">
-      <div class="thumb" style="background-color:#1a2431;"><img src="assets/img/dental-model.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a2431;"><img src="assets/img/chewing-gum.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">ドライマウス（口腔乾燥）ってどうするの？</div></div>
     </a>
@@ -213,7 +244,7 @@
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">口内炎（アフタ）って何で治すの？</div></div>
     </a>
     <a class="card" href="articles/oil-pulling.html">
-      <div class="thumb" style="background-color:#1a2431;"><img src="assets/img/mouthwash.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a2431;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">オイルプリング（油うがい）って効くの？</div></div>
     </a>
@@ -223,27 +254,27 @@
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">乳酸菌は虫歯・歯周病に効くの？</div></div>
     </a>
     <a class="card" href="articles/wisdom-tooth.html">
-      <div class="thumb" style="background-color:#1a2431;"><img src="assets/img/dental-xray.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a2431;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">親知らずって抜いた方がいいの？</div></div>
     </a>
     <a class="card" href="articles/xylitol.html">
-      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/chewing-gum.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/manual-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">キシリトールって 本当に虫歯予防になるの？</div></div>
     </a>
     <a class="card" href="articles/tongue-halitosis.html">
-      <div class="thumb" style="background-color:#1f2a37;"><img src="assets/img/gum-health.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1f2a37;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">口臭</span><div class="card-title">舌の掃除（舌みがき）って 口臭に効くの？</div></div>
     </a>
     <a class="card" href="articles/srp-scaling.html">
-      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/interdental-brush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/manual-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯石取り（SRP）ってどのくらい 効果あるの？</div></div>
     </a>
     <a class="card" href="articles/sensitivity-toothpaste.html">
-      <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/toothpaste-tube.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">知覚過敏の歯磨き粉（硝酸カリウム） って効くの？</div></div>
     </a>
@@ -253,37 +284,37 @@
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">隣の歯との間の初期虫歯、 削らず止められるの？</div></div>
     </a>
     <a class="card" href="articles/regular-cleaning.html">
-      <div class="thumb" style="background-color:#1b2430;"><img src="assets/img/dental-tools.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1b2430;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">定期的な歯のクリーニングって 意味あるの？</div></div>
     </a>
     <a class="card" href="articles/recall-interval.html">
-      <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/dental-tools.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/manual-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯の定期検診って 何ヶ月ごとに行けばいいの？</div></div>
     </a>
     <a class="card" href="articles/mouthwash.html">
-      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/mouthwash.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">マウスウォッシュは歯みがきの 代わりになるの？</div></div>
     </a>
     <a class="card" href="articles/mi-paste-remin.html">
-      <div class="thumb" style="background-color:#1b2430;"><img src="assets/img/fluoride-ppm.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1b2430;"><img src="assets/img/manual-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">初期虫歯（白い斑点）は 削らず治せるの？</div></div>
     </a>
     <a class="card" href="articles/keep-teeth-30y.html">
-      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/dental-model.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">一生自分の歯で噛むには どうするの？</div></div>
     </a>
     <a class="card" href="articles/gingivitis-plaque.html">
-      <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/gum-health.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/manual-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">歯みがきをサボると歯ぐきは どうなるの？</div></div>
     </a>
     <a class="card" href="articles/chx-mouthwash.html">
-      <div class="thumb" style="background-color:#1f2a37;"><img src="assets/img/mouthwash.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1f2a37;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">オーラルケア</span><div class="card-title">クロルヘキシジンのうがい薬って効くの？ 使い続けて大丈夫？</div></div>
     </a>
@@ -300,8 +331,18 @@
   <p class="sub">白くしたい人へ。市販ホワイトニング・ホワイトニング歯磨き粉の"どこまで効くか"を正直に。</p>
   <div class="card-grid">
     <!--CAT:whitening-->
+    <a class="card" href="articles/whitening-home-vs-office.html">
+      <div class="thumb" style="background-color:#1d2735;"><img src="assets/img/whitening.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">ホワイトニング</span><div class="card-title">ホームとオフィス、 どっちがいいの？</div></div>
+    </a>
+    <a class="card" href="articles/whitening-concentration.html">
+      <div class="thumb" style="background-color:#241d2f;"><img src="assets/img/toothpaste-tube.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">ホワイトニング</span><div class="card-title">ホワイトニングは 「濃いほど白い」？</div></div>
+    </a>
     <a class="card" href="articles/whitening-toothpaste.html">
-      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/whitening.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/dental-model.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">ホワイトニング</span><div class="card-title">ホワイトニング歯磨き粉って どこまで白くなるの？</div></div>
     </a>
@@ -334,17 +375,17 @@
       <div class="ov"><span class="card-cat">歯周病</span><div class="card-title">歯周病が治った後のメンテナンスって 必要なの？</div></div>
     </a>
     <a class="card" href="articles/perio-staging.html">
-      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/gum-health.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/floss-interdental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">歯周病</span><div class="card-title">自分の歯周病はどのくらい進んでるの？ ステージとグレードで見る</div></div>
     </a>
     <a class="card" href="articles/perio-heart.html">
-      <div class="thumb" style="background-color:#1a2733;"><img src="assets/img/dental-model.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a2733;"><img src="assets/img/mouthwash.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">全身と歯</span><div class="card-title">歯周病って心臓の病気と関係あるの？ 口と全身のつながりを論文で</div></div>
     </a>
     <a class="card" href="articles/perio-diabetes.html">
-      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/dental-model.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/tongue-cleaner.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">全身と歯</span><div class="card-title">歯周病を治すと糖尿病も よくなるの？</div></div>
     </a>
@@ -397,12 +438,12 @@
       <div class="ov"><span class="card-cat">食と歯</span><div class="card-title">砂糖をどれくらい減らせば 虫歯にならないの？</div></div>
     </a>
     <a class="card" href="articles/sealant.html">
-      <div class="thumb" style="background-color:#232f3d;"><img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#232f3d;"><img src="assets/img/kids-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">奥歯の溝を埋めるシーラントって 虫歯予防になるの？</div></div>
     </a>
     <a class="card" href="articles/sdf-silver.html">
-      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/baby-food.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">サホライド（SDF）で虫歯の進行は 止められるの？黒くなる？</div></div>
     </a>
@@ -432,7 +473,7 @@
       <div class="ov"><span class="card-cat">食育</span><div class="card-title">早食いの子は 太りやすい？</div></div>
     </a>
     <a class="card" href="articles/fluoride-varnish.html">
-      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/kids-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">歯医者さんのフッ素塗布って どのくらい虫歯を防ぐの？</div></div>
     </a>
@@ -442,32 +483,32 @@
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">フッ素のうがい（フッ化物洗口）って 子どもに必要？</div></div>
     </a>
     <a class="card" href="articles/early-ortho-class2.html">
-      <div class="thumb" style="background-color:#1b2430;"><img src="assets/img/clear-aligner.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1b2430;"><img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">出っ歯の子、 早めに矯正した方がいいの？</div></div>
     </a>
     <a class="card" href="articles/early-childhood-caries.html">
-      <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a222e;"><img src="assets/img/kids-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">乳歯の虫歯、 何が原因でどう防ぐの？</div></div>
     </a>
     <a class="card" href="articles/breastfeeding-teeth.html">
-      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/baby-bottle.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1d2836;"><img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">母乳育児って歯並びにいいの？ 論文で見る母乳と歯並び</div></div>
     </a>
     <a class="card" href="articles/baby-led-weaning.html">
-      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/baby-food.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/kids-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">食育</span><div class="card-title">手づかみ食べ（BLW）ってどうするの？ 栄養は足りる？</div></div>
     </a>
     <a class="card" href="articles/baby-chewing.html">
-      <div class="thumb" style="background-color:#1a2733;"><img src="assets/img/baby-food.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a2733;"><img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">食育</span><div class="card-title">赤ちゃんの&quot;噛む力&quot;って いつ育つの？</div></div>
     </a>
     <a class="card" href="articles/adenoid-face.html">
-      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/mouth-breathing.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/kids-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">子どもの歯</span><div class="card-title">口呼吸・お口ぽかん、顔つきや歯並びに影響するの？</div></div>
     </a>
@@ -500,12 +541,12 @@
       <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">口腔機能低下症って何？ チェック方法は？</div></div>
     </a>
     <a class="card" href="articles/oral-frailty.html">
-      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/senior-hands.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/gum-health.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">オーラルフレイルってどうするの？ 放置するとどうなる？</div></div>
     </a>
     <a class="card" href="articles/oral-care-pneumonia.html">
-      <div class="thumb" style="background-color:#1a2733;"><img src="assets/img/senior-hands.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1a2733;"><img src="assets/img/denture-cast.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">高齢と歯</span><div class="card-title">口腔ケアで肺炎って本当に防げるの？</div></div>
     </a>
@@ -520,7 +561,7 @@
       <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">入れ歯の下が赤い・痛い… 義歯性口内炎ってどうするの？</div></div>
     </a>
     <a class="card" href="articles/denture-night.html">
-      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/denture-cast.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#202a38;"><img src="assets/img/senior-hands.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">入れ歯は夜つけたまま 寝ていいの？</div></div>
     </a>
@@ -530,7 +571,7 @@
       <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">入れ歯の洗浄って結局どうするの？ ブラシと洗浄剤どっち？</div></div>
     </a>
     <a class="card" href="articles/denture-adhesive.html">
-      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/denture-cast.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/senior-hands.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">入れ歯</span><div class="card-title">入れ歯安定剤って どう使うの？選び方は？</div></div>
     </a>
@@ -548,12 +589,12 @@
       <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">インプラントの20年生存率は 結局いくつ？</div></div>
     </a>
     <a class="card" href="articles/smoking-implant.html">
-      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/implant.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#17202b;"><img src="assets/img/dental-xray.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">タバコを吸っているとインプラントは 失敗しやすいの？</div></div>
     </a>
     <a class="card" href="articles/peri-implantitis.html">
-      <div class="thumb" style="background-color:#1f2a37;"><img src="assets/img/implant.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1f2a37;"><img src="assets/img/dental-model.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">インプラント周囲炎ってどのくらい起こるの？ 頻度とケアを論文で</div></div>
     </a>
@@ -563,17 +604,17 @@
       <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">歯型取りが光スキャンに？ 口腔内スキャナーの精度は？</div></div>
     </a>
     <a class="card" href="articles/implant-maintenance.html">
-      <div class="thumb" style="background-color:#1f2a37;"><img src="assets/img/implant.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1f2a37;"><img src="assets/img/ceramic-crown.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">インプラントのメインテナンスって どのくらいの頻度？</div></div>
     </a>
     <a class="card" href="articles/implant-lifespan.html">
-      <div class="thumb" style="background-color:#1b2430;"><img src="assets/img/implant.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#1b2430;"><img src="assets/img/zirconia-crown.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">インプラントって 何年もつの？</div></div>
     </a>
     <a class="card" href="articles/diabetes-implant.html">
-      <div class="thumb" style="background-color:#232f3d;"><img src="assets/img/implant.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="thumb" style="background-color:#232f3d;"><img src="assets/img/gum-health.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
       <div class="ov"><span class="card-cat">インプラント</span><div class="card-title">糖尿病でも インプラントできるの？</div></div>
     </a>
@@ -618,6 +659,26 @@
   <p class="sub">「以前はこう言われていた」が、その後の研究でどう変わったか。数字が動いた理由まで追います。</p>
   <div class="card-grid">
     <!--CAT:update-->
+    <a class="card" href="articles/sugar-gingivitis-update.html">
+      <div class="thumb" style="background-color:#241a1a;"><img src="assets/img/sugar-sweets.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">昔の常識 vs 最新</span><div class="card-title">砂糖はむし歯だけ？ 歯ぐきの炎症にも</div></div>
+    </a>
+    <a class="card" href="articles/power-brush-type-update.html">
+      <div class="thumb" style="background-color:#1a2028;"><img src="assets/img/electric-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">昔の常識 vs 最新</span><div class="card-title">電動歯ブラシ 回転式と音波式どっち？</div></div>
+    </a>
+    <a class="card" href="articles/fluoride-varnish-nma-update.html">
+      <div class="thumb" style="background-color:#1a2430;"><img src="assets/img/kids-dental.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">昔の常識 vs 最新</span><div class="card-title">塗るフッ素、効くのは どれ？最新NMA</div></div>
+    </a>
+    <a class="card" href="articles/sealant-primary-update.html">
+      <div class="thumb" style="background-color:#1c2430;"><img src="assets/img/kids-toothbrush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div class="scrim"></div>
+      <div class="ov"><span class="card-cat">昔の常識 vs 最新</span><div class="card-title">乳歯のシーラントは 本当に効くの？</div></div>
+    </a>
     <a class="card" href="articles/interdental-cleaning-update.html">
       <div class="thumb" style="background-color:#182028;"><img src="assets/img/interdental-brush.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       <div class="scrim"></div>
@@ -707,6 +768,20 @@
   </div>
 </section>
 
+<!-- ============ 監修者カード（ホーム最下部） ============ -->
+<section class="hero-author" id="about" style="padding-bottom:40px;margin-top:8px;">
+  <h2 style="max-width:1080px;margin:0 auto 14px;padding:0 8px;font-size:15px;letter-spacing:.08em;color:#6b7a8d;font-weight:800;">このサイトの監修者</h2>
+  <div class="author">
+    <div class="author-avatar"></div>
+    <div class="author-body">
+      <div class="author-role"><svg><use href="#i-shield"/></svg>現役歯科医師が回答・監修</div>
+      <div class="author-name">院長J<span class="lic">歯科医師・臨床10年</span></div>
+      <div class="author-bio">歯科医院の<strong>院長</strong>。2院の監修と会社経営も手がける。診療で患者さんに聞かれる疑問を、宣伝ではなく<strong>論文をもとに</strong>フェアに解説します。</div>
+    </div>
+    <div class="author-verify"><svg><use href="#i-book"/></svg><span>EBM</span></div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <a href="index.html" class="brand"><span class="wm-dental">DENTAL</span><span class="wm-sep"></span><b>Q</b></a>
@@ -716,8 +791,43 @@
       <a href="about.html">運営者情報</a>
       <a href="privacy.html">プライバシーポリシー</a>
     </div>
-    <div class="foot-copy">© 2026 Dental Q｜歯科の"ホント"をエビデンス（論文つき）でやさしく。監修：ジェイ院長（歯科医師）。本サイトはアフィリエイト広告を利用しています。</div>
+    <div class="foot-copy">© 2026 Dental Q｜歯科の"ホント"をエビデンス（論文つき）でやさしく。監修：院長J（歯科医師）。本サイトはアフィリエイト広告を利用しています。</div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var input=document.getElementById('dq-search'), box=document.getElementById('dq-results');
+  if(!input||!box) return;
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function render(list){
+    if(!list.length){box.innerHTML='<div class="dq-none">「'+esc(input.value)+'」に一致する記事は見つかりませんでした</div>';box.hidden=false;return;}
+    box.innerHTML=list.slice(0,12).map(function(r){
+      return '<a href="'+r.u+'"><div class="rc">'+esc(r.c)+'</div><div class="rt">'+esc(r.t)+'</div><div class="rd">'+esc(r.d)+'</div></a>';
+    }).join('');
+    box.hidden=false;
+  }
+  function search(q){
+    q=(q||'').trim().toLowerCase();
+    if(!q){box.hidden=true;return;}
+    var terms=q.split(/\s+/);
+    var idx=window.DQ_INDEX||[];
+    var res=idx.filter(function(r){
+      var hay=((r.t||'')+' '+(r.c||'')+' '+(r.d||'')).toLowerCase();
+      return terms.every(function(t){return hay.indexOf(t)>=0;});
+    });
+    render(res);
+  }
+  input.addEventListener('input',function(){search(input.value);});
+  input.addEventListener('focus',function(){if(input.value)search(input.value);});
+  input.addEventListener('keydown',function(e){if(e.key==='Escape'){box.hidden=true;input.blur();}});
+  document.addEventListener('click',function(e){if(!e.target.closest('.catbar-search'))box.hidden=true;});
+  // ?q= で来たら検索を実行（サイトリンク検索ボックス対応）
+  try{
+    var q=new URLSearchParams(location.search).get('q');
+    if(q){ input.value=q; window.addEventListener('load',function(){search(q); input.focus();}); }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
