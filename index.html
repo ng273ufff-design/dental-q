@@ -75,6 +75,12 @@
   .dq-gate-choices .gt{font-size:16px;font-weight:900;color:var(--ink);margin-bottom:4px;}
   .dq-gate-choices .gd{font-size:12.5px;color:var(--muted);line-height:1.6;}
   .dq-gate-skip{margin-top:16px;background:none;border:none;color:var(--muted);font-size:12.5px;cursor:pointer;text-decoration:underline;font-family:inherit;}
+  .nav-ig{display:inline-flex;align-items:center;gap:5px;color:#e6ecf5;}
+  .nav-ig .ico{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;}
+  .nav-ig:hover{color:#fff;}
+  .ig-follow{display:flex;align-items:center;justify-content:center;gap:10px;max-width:560px;margin:14px auto 0;background:linear-gradient(135deg,#405DE6,#833AB4,#E1306C,#F77737);color:#fff!important;font-weight:800;font-size:15px;padding:14px 20px;border-radius:14px;text-decoration:none;box-shadow:0 6px 20px rgba(131,58,180,.3);}
+  .ig-follow .ico{width:22px;height:22px;stroke:#fff;stroke-width:2;fill:none;}
+  .ig-follow:hover{opacity:.94;text-decoration:none;}
 </style>
 <script defer src="assets/analytics.js"></script>
 <script defer src="assets/search-index.js"></script>
@@ -94,6 +100,7 @@
   <symbol id="i-brush" viewBox="0 0 24 24"><path d="M4 19.5l7.5-7.5M13 4.5l6.5 6.5M11.5 12l-6 6a1.8 1.8 0 0 1-2.5-2.5l6-6M13 4.5l3.5-1 3 3-1 3.5-2.5 2.5-6-6L13 4.5Z"/></symbol>
   <symbol id="i-tag" viewBox="0 0 24 24"><path d="M4 4h7l9 9-7 7-9-9V4Z"/><circle cx="8" cy="8" r="1.4" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
   <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></symbol>
   <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v15M8 19h8M6 8l-3 5.5h6L6 8ZM18 8l-3 5.5h6L18 8ZM5.5 8l6.5-2 6.5 2"/></symbol>
@@ -109,6 +116,7 @@
       <a href="#pro">歯科医師向け</a>
       <a href="all-articles.html">全記事一覧</a>
       <a href="#about">このサイトについて</a>
+      <a class="nav-ig" href="https://www.instagram.com/dentalq.jp/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico"><use href="#i-insta"/></svg>Instagram</a>
     </nav>
   </div>
 </header>
@@ -826,6 +834,7 @@
       <p style="margin:0">記事はすべて<strong>実在する学術論文（PMID／DOIを明記）</strong>が根拠。都合のいい研究だけでなく、<strong>研究の質や利益相反（誰が資金を出したか）まで正直に</strong>お伝えし、あなたが自分で判断できる材料を渡します。</p>
     </div>
   </div>
+  <a class="ig-follow" href="https://www.instagram.com/dentalq.jp/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-insta"/></svg>Instagram（@dentalq.jp）で毎日発信中 → フォローする</a>
 </section>
 
 <!-- ============ 監修者カード（ホーム最下部） ============ -->
@@ -848,6 +857,7 @@
     <div class="foot-links">
       <a href="index.html">記事一覧</a>
       <a href="all-articles.html">全記事一覧</a>
+      <a href="https://www.instagram.com/dentalq.jp/" target="_blank" rel="noopener">Instagram</a>
       <a href="for-dentists.html">論文データベース</a>
       <a href="about.html">運営者情報</a>
       <a href="privacy.html">プライバシーポリシー</a>
