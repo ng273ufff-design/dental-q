@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Q｜ようこそ（一般の方 / 歯科医療従事者の方）</title>
+<meta name="description" content="Dental Q へようこそ。一般の方向けのエビデンス解説と、歯科医療従事者向けの青本科目別・論文データベース。あなたに合った入口をお選びください。">
+<link rel="canonical" href="https://ng273ufff-design.github.io/dental-q/gate.html">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  body{background:linear-gradient(160deg,#0d1013,#10151b 55%,#1e3fa6);min-height:100vh;color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 18px;}
+  .g-brand{display:inline-flex;align-items:baseline;gap:3px;font-weight:800;letter-spacing:.04em;font-size:26px;margin-bottom:8px;}
+  .g-brand .wm-dental{color:#dbe3ee;} .g-brand b{color:#fff;}
+  .g-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);
+    border-radius:999px;padding:5px 15px;font-size:12px;font-weight:700;margin-bottom:22px;}
+  .g-badge svg{width:14px;height:14px;stroke:currentColor;stroke-width:2.2;fill:none;}
+  .g-head h1{font-size:clamp(22px,4.5vw,30px);font-weight:900;text-align:center;line-height:1.5;margin-bottom:6px;}
+  .g-head p{font-size:14px;color:rgba(255,255,255,.8);text-align:center;margin-bottom:30px;}
+  .g-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;width:100%;}
+  @media(max-width:600px){.g-cards{grid-template-columns:1fr;}}
+  .g-card{display:flex;flex-direction:column;background:#fff;border-radius:20px;padding:28px 24px;text-decoration:none;
+    box-shadow:0 12px 40px rgba(0,0,0,.28);transition:transform .16s ease,box-shadow .16s ease;position:relative;overflow:hidden;}
+  .g-card:hover{transform:translateY(-5px);box-shadow:0 18px 52px rgba(0,0,0,.36);text-decoration:none;}
+  .g-ic{width:56px;height:56px;border-radius:15px;display:grid;place-items:center;margin-bottom:16px;}
+  .g-ic svg{width:30px;height:30px;stroke:#fff;stroke-width:1.8;fill:none;}
+  .g-card.gen .g-ic{background:linear-gradient(135deg,#2a52c9,#5f96ff);}
+  .g-card.pro .g-ic{background:linear-gradient(135deg,#10151b,#333d49);}
+  .g-ey{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--brand-strong);margin-bottom:4px;}
+  .g-card.pro .g-ey{color:#333d49;}
+  .g-t{font-size:20px;font-weight:900;color:var(--ink);margin-bottom:8px;}
+  .g-d{font-size:13.5px;color:var(--muted);line-height:1.7;flex:1;}
+  .g-go{margin-top:16px;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:800;color:var(--brand-strong);}
+  .g-card.pro .g-go{color:#10151b;}
+  .g-go svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.4;fill:none;}
+  .g-foot{margin-top:26px;font-size:11.5px;color:rgba(255,255,255,.6);text-align:center;line-height:1.7;}
+  .g-foot a{color:rgba(255,255,255,.85);}
+</style>
+<script defer src="assets/analytics.js"></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-9.2-9C1.3 8 3 4.5 6.3 4.5c2 0 3.2 1.2 3.7 2 .5-.8 1.7-2 3.7-2C17 4.5 18.7 8 21.2 11 19 15.5 12 20 12 20Z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M6 3h8l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M8 12.5h7M8 16h7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 6l6 6-6 6"/></symbol>
+</svg>
+
+<div class="g-brand"><span class="wm-dental">DENTAL</span>&nbsp;<b>Q</b></div>
+<div class="g-badge"><svg><use href="#i-shield"/></svg>現役歯科医師 × エビデンス（論文つき）</div>
+<div class="g-head">
+  <h1>ようこそ。<br>あなたはどちらですか？</h1>
+  <p>入口を選ぶと、あなたに合ったページへご案内します。</p>
+</div>
+
+<div class="g-cards">
+  <a class="g-card gen" href="index.html" onclick="dqGate('general')">
+    <div class="g-ic"><svg><use href="#i-heart"/></svg></div>
+    <div class="g-ey">FOR EVERYONE</div>
+    <div class="g-t">一般の方へ</div>
+    <div class="g-d">電動歯ブラシ・ホワイトニング・フッ素・子どもの歯…「結局どうなの？」を、宣伝ぬきで現役歯科医師が論文をもとに正直に解説します。</div>
+    <span class="g-go">記事を読む<svg><use href="#i-arrow"/></svg></span>
+  </a>
+  <a class="g-card pro" href="for-dentists.html" onclick="dqGate('professional')">
+    <div class="g-ic"><svg><use href="#i-book"/></svg></div>
+    <div class="g-ey">FOR PROFESSIONALS</div>
+    <div class="g-t">歯科医療従事者の方へ</div>
+    <div class="g-d">青本の科目別に整理した一次文献データベース（21科目・111文献）。PMID/DOI・一行知見つきで、患者説明・院内勉強会・アップデートに。</div>
+    <span class="g-go">論文データベースへ<svg><use href="#i-arrow"/></svg></span>
+  </a>
+</div>
+
+<div class="g-foot">
+  © 2026 Dental Q｜監修：院長J（歯科医師）　／　<a href="about.html">運営者情報</a>　<a href="index.html">トップ</a>
+</div>
+
+<script>
+  function dqGate(choice){
+    try{ if(window.gtag) window.gtag('event','gate_select',{choice:choice}); }catch(e){}
+    try{ localStorage.setItem('dq_visitor', choice); }catch(e){}
+  }
+</script>
+</body>
+</html>
