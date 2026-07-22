@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /dashboard.html
 Disallow: /picks.html
+Disallow: /ig/
 
 Sitemap: https://dentalq.jp/sitemap.xml
