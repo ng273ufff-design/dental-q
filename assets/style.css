@@ -390,3 +390,14 @@ tbody tr:nth-child(even) td{background:#fafcfc;}
 .ref-list a:hover{border-bottom-color:var(--brand-strong);}
 .ref-note{font-size:11.5px;color:var(--muted);margin-top:14px;padding-top:12px;
   border-top:1px solid var(--line-soft);line-height:1.7;}
+
+/* ===== むずかしい言葉の意味（全記事共通・一般層向けゲート） ===== */
+.wordbox{max-width:820px;margin:16px auto;border:1px solid var(--line);border-radius:12px;background:var(--brand-tint);overflow:hidden;}
+.wordbox>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:12px 16px;font-size:14px;font-weight:800;color:var(--brand-strong);}
+.wordbox>summary::-webkit-details-marker{display:none;}
+.wordbox>summary::after{content:"＋";margin-left:auto;font-weight:800;color:var(--brand-strong);}
+.wordbox[open]>summary::after{content:"−";}
+.wordbox-body{padding:2px 16px 14px;}
+.wordbox dl{margin:0;}
+.wordbox dt{font-size:13.5px;font-weight:800;color:var(--ink);margin-top:10px;}
+.wordbox dd{margin:2px 0 0;font-size:13px;line-height:1.65;color:var(--muted);}
