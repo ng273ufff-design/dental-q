@@ -5,3 +5,6 @@ Disallow: /picks.html
 Disallow: /ig/
 
 Sitemap: https://dentalq.jp/sitemap.xml
+
+User-agent: *
+Disallow: /dl/
